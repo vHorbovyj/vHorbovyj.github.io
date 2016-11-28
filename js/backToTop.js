@@ -1,14 +1,14 @@
 $(document).ready(function(){
-		$("#backToTop").hide();
+		$(".backToTop").hide();
 		$(function () {
 			$(window).scroll(function () {
-				if ($(this).scrollTop() > 50) {
-					$('#backToTop').fadeIn();
+				if ($(this).scrollTop() > 450) {
+					$('.backToTop').fadeIn();
 				} else {
-					$('#backToTop').fadeOut();
+					$('.backToTop').fadeOut();
 				}
 			});
-			$('#backToTop a').click(function () {
+			$('.backToTop a').click(function () {
 				$('body,html').animate({
 					scrollTop: 0
 				}, 1500);

@@ -1,20 +1,17 @@
-/**Загальні стилі **/
+/** ЗАГАЛЬНІ СТИЛІ **/
 * {
     transition: all .3s;
     box-sizing: border-box;
 }
-
 html, body {
     height: 100%;
 }
-
 body {
     font-size: 1em;
     font-size: 1rem;
     font-size: 16px;
     color: #212121;
-    background-color: #fff;
-
+    background-color: rgba(173, 198, 9, .2);
 }
 embed,img,object,video {
     max-width: 100%;
@@ -23,146 +20,203 @@ video {
     max-width: 100%;
     height: auto;
 }
-.wrapperMain {
+/** /ЗАГАЛЬНІ СТИЛІ **/
+
+/** ЗАДАЄМО DISPLAY:FLEX ДЛЯ ЕЛЕМЕНТІВ **/
+.wrapperMain, 
+.header, 
+.wrapperContent, 
+.navigation ul, 
+.navigation ul li a, 
+.rowTag, 
+.rowTagHeroName, 
+.textBlock, 
+.venoIcon, 
+.underRowBlock,
+.underRowBlock li,
+.skillBlock, 
+.skillTable, 
+.skillTable tr, 
+.skillTable td, 
+.footer, 
+.infoList {
     display: flex;
+    width: 100%;
+}
+/** /ЗАДАЄМО DISPLAY:FLEX ДЛЯ ЕЛЕМЕНТІВ **/
+
+.historyGroupBlock, 
+.rolesGroupBlock, 
+.statsGroupBlock, 
+.skillsGroupBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/** ОБГОРТКИ **/
+.wrapperMain {
     flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
     width: 1140px;
     margin: 0 auto;
 }
-.header {
-    display: flex;
-    flex-direction: row;
-    height: 660px;
-    width: 100%;
-    background-image: url(imgsBack/venoHead.jpg);
-}
 .wrapperContent {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 840px;
 }
-.bigText {
-    display: flex;
+/** /ОБГОРТКИ **/
+
+/** ШАПКА **/
+.header {
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    color: rgba(173, 198, 9, 1);
-    font-size: 5em;
-    font-weight: 700;
-    line-height: 1.8;
+    height: 660px;
+    background-image: url(imgsBack/venoHead.jpg);
+}
+.overlayColor {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(173, 198, 9, .2);
+}
+.bigLettersHero {
+    position: fixed;
+    top: 0;
+    left: -36vw;
+    width: 100%;
+    padding-left: 12%;
+    color: rgba(173, 198, 9, .5);
+    font-size: 4em;
     text-transform: uppercase;
-    text-shadow: -1px 0 1px rgba(0, 0, 0, .7);
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid rgba(173, 198, 9, .5);
     -ms-transform: rotate(270deg);
     -moz-transform: rotate(270deg);
     -webkit-transform: rotate(270deg);
     transform: rotate(270deg);
 }
+/** /ШАПКА **/
+
+/** НАВІГАЦІЯ САЙТОМ **/
 .navigation {
     position: fixed;
-    width: 110px;
-    top: 3vh;
+    top: 35%;
+    height: 30%;
     right: 10vw;
 }
 .navigation ul {
-    display: flex;
+    height: 100%;
     flex-direction: column;
-    width: 100%;
+    justify-content: space-between;
     list-style: none;
 }
 .navigation ul li {
-    margin: 0.2em;
+    margin: 0.1em 0;
+    padding: 0 0.2em;
+    border-right: 3px solid rgba(173, 198, 9, 0);
+}
+.navigation ul li:hover {
+    padding: 0 0.2em;
+    border-right: 3px solid rgba(173, 198, 9, 1);
 }
 .navigation ul li a {
-    display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    width: 100%;
-    color: rgba(173, 198, 9, 1);
+    color: rgba(173, 198, 9, .5);
     font-size: 1.4em;
     text-align: right;
     text-decoration: none;
-    opacity: .4;
 }
 .navigation ul li a:hover {
-    opacity: 1;
-    transform: translate(-0.5rem);
+    color: rgba(173, 198, 9, 1);
+    transform: translate(-0.3rem);
 }
+/** /НАВІГАЦІЯ САЙТОМ **/
+
+/** ЗАГОЛОВКИ **/
 .rowTag {
-    display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 100%;
     margin-top: 0.2em;
+    padding: 0.2em;
     color: rgba(173, 198, 9, 1);
     font-size: 2.8em;
     font-style: italic;
+    line-height: 1;
+    background-color: rgba(173, 198, 9, .2);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .7);
+    border-top: 1px solid rgba(173, 198, 9, .5);
+    border-bottom: 1px solid rgba(173, 198, 9, .5);
 }
-.underRowTagText {
-    display: flex;
-    flex-direction: row;
+.rowTagHeroName {
     justify-content: center;
-    width: 100%;
     margin: 0.4em;
     height: 32px;
     color: rgba(173, 198, 9, 1);
     font-size: 1.8em;
 }
+/** /ЗАГОЛОВКИ **/
+
+/** ТЕКСТОВА ЧАСТИНА БЛОКІВ **/
 .textBlock {
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-between;
     padding: 0.2em;
 }
 .textBlock p {
     text-align: center;
     margin: 0;
 }
+/** /ТЕКСТОВА ЧАСТИНА БЛОКІВ **/
+
+/** ІКОНКА ГЕРОЯ **/
 .venoIcon {
-    display: flex;
     justify-content: center;
     margin: 0.8rem 0;
+    padding: 0.8em 0;
     opacity: .9;
+    border-top: 1px solid rgba(173, 198, 9, .5);
 }
-.role {
-    display: flex;
+/** /ІКОНКА ГЕРОЯ **/
+
+/** БЛОКИ ПІД ЗАГОЛОВКАМИ **/
+.underRowBlock {
     flex-direction: row;
     justify-content: center;
-    width: 100%;
     height: 50px;
     margin: 0.2em;
     list-style: none;
 }
-.role li {
-    display: flex;
+.underRowBlock li {
     justify-content: center;
     align-items: center;
     padding: 0 0.8em;
     font-size: 1.2em;
 }
-
-.role img {
+.underRowBlock img {
     height: 24px;
     padding: 0 0.4em;
 }
-.role img[alt="Agility"] {
+.underRowBlock img[alt="Agility"] {
     height: 33px;
 }
+/** /БЛОКИ ПІД ЗАГОЛОВКАМИ **/
+
+/** АТРИБУТИ **/
 .statsTable {
     width: 100%;
     margin: 0 auto;
     font-size: 0.8em;
-    background-color: rgba(173, 198, 9, .2);
 }
 .statsTable tr, th, td {
     border: none;
-}
-.statsTable tr, th {
-    padding: 0.8rem;
+    background-color: rgba(173, 198, 9, .1);
 }
 .statsTable td {
     padding: 0.4em;
@@ -171,13 +225,15 @@ video {
 .statsTable th {
     width: 25%;
     padding: 0.4em;
-    color: rgba(173, 198, 9, .7);
-    font-size: 1.2em;
+    color: rgba(173, 198, 9, .9);
+    font-size: 1.4em;
+    letter-spacing: 0.1em;
     text-align: center;
     background-color: #fafafa;
     border-top: 2px solid rgba(173, 198, 9, 1);
     border-bottom: 2px solid rgba(173, 198, 9, 1);
-    box-shadow: 0 1px 1px #212121;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .7);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .7);
 }
 .statsTable td:first-child {
     text-align: left;
@@ -192,29 +248,36 @@ video {
 .statsTable tr:hover {
     background-color: rgba(173, 198, 9, .3);
 }
+/** /АТРИБУТИ **/
+
+/** ВМІННЯ **/
 .skillBlock {
-    display: flex;
-    flex-direction: column;
-    padding: 0 0.1em;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 24.5%;
+    height: 100%;
+    margin-top: 1.2em;
+}
+.skillBlock:hover {
+    box-shadow: 0 1px 4px #212121;
 }
 .skillTable {
-    display: flex;
-}
-.skillTable:hover {
-    box-shadow: 0 1px 10px #212121;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 .skillTable tr {
-    display: flex;
     justify-content: center;
+    padding: 0 0.4em;
 }
 .skillTable td {
-    display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    width: 100%;
-    margin: 0.2em 0.4em;
+    margin: 0.2em 0;
     padding: 0;
-    font-size: 0.77em;
+    font-size: 0.76em;
+    background-color: transparent;
 }
 .skillTable p {
     margin: 0.2em 0;
@@ -228,34 +291,32 @@ video {
 .skillTable tr:nth-child(even) {
     background-color: rgba(173, 198, 9, .3);
 }
-.skillTable tr:nth-child(2),
+.skillTable tr,
 .skillTable td:first-child {
     font-weight: 700;
 }
 .skillImg img {
-    width: 65%;
-    border: 2px solid rgba(173, 198, 9, 1);
-    border-radius: 50%;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, .5);
-}
-.skillTable tr:first-child {
-    padding: 0.4em;
-    background-color: #fafafa;
-    border-top: 2px solid rgba(173, 198, 9, 1);
-    border-bottom: 2px solid rgba(173, 198, 9, 1);
-    box-shadow: 0 0 2px #212121;
+    width: 90%;
+    margin-top: -3em;
+    border: 3px solid rgba(173, 198, 9, 1);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .7);
 }
 .skillTable td:nth-child(2),
 .skillTable td:last-child {
     justify-content: center;
-    text-align: center;
+    text-align: right;
+}
+.skillTable tr:first-child {
+    background-color: #fafafa;
+    border-bottom: 2px solid rgba(173, 198, 9, 1);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
 }
 .skillTable tr:first-child td:last-child {
     color: rgba(173, 198, 9, 1);
-    font-size: 1em;
-    font-weight: 700;
+    font-size: 1.1em;
     line-height: 1.8;
     letter-spacing: 0.1em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .7);
 }
 .skillTable tr:nth-child(3) td {
     font-size: 0.7em;
@@ -264,16 +325,15 @@ video {
 .skillTable tr:nth-last-child(-n+2) img {
     margin: 0 auto;
 }
-footer {
-    display: flex;
+/** /ВМІННЯ **/
+
+/** ПІДВАЛ **/
+.footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin: 1.2em 0 0 0;
 }
 .infoList {
-    display: flex;
     flex-direction: column;
     align-items: center;
     list-style: none;
@@ -281,12 +341,88 @@ footer {
 }
 .infoList li {
     margin: 0.2em 0;
+    padding: 0.2em 0;
 }
 .infoList li a {
     text-decoration: none;
     font-weight: 700;
     color: #212121;
+    border-bottom: 2px solid rgba(173, 198, 9, 0);
 }
 .infoList li a:hover {
-    border-bottom: 1px dashed #212121;
+    border-bottom: 2px solid rgba(173, 198, 9, .9);
+}
+/** /ПІДВАЛ **/
+
+@media only screen and (min-device-width : 320px)  and (max-device-width : 480px) {
+  /* Оба сайдбара располагаются в одной строке */
+    * {
+        font-size: 1.1em;
+    }
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 25%;
+        background-image: url(imgsBack/venoHead.jpg);
+        background-size: cover;
+    }
+        .bigLettersHero {
+        position: inherit;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-left: 6%;
+        color: rgba(173, 198, 9, .5);
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        border-bottom: 2px solid rgba(173, 198, 9, .5);
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    .navigation {
+        position: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .wrapperMain {
+        width: 320px;
+    }
+    .wrapperContent {
+        width: 300px;
+    }
+}
+/* Экраны среднего размера */
+@media all and (min-width: 600px) {
+  /* Оба сайдбара располагаются в одной строке */
+  .aside { flex: 1 auto; }
+    .logo img {
+        display: flex;
+        width: 35%;
+    }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    
+}
+/* Большие экраны */
+@media all and (min-width: 800px) {
+  /* Мы меняем местами элементы .aside-1 и .main, а также сообщаем
+   * элементу .main забирать в два раза больше места, чем сайдбары.
+   */
+  .main { flex: 2 0px; }
+
+  .aside-1 { order: 1; }
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+    .logo img {
+        display: flex;
+        width: 35%;
+    }
 }
