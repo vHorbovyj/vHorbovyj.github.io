@@ -33,7 +33,8 @@ video {
 .textBlock, 
 .venoIcon, 
 .underRowBlock,
-.underRowBlock li,
+.underRowBlock tr, 
+.underRowBlock td, 
 .skillBlock, 
 .skillTable, 
 .skillTable tr, 
@@ -166,14 +167,27 @@ video {
 /** ТЕКСТОВА ЧАСТИНА БЛОКІВ **/
 .textBlock {
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: flex-start;
     padding: 0.2em;
 }
 .textBlock p {
     text-align: center;
     margin: 0;
+    padding: 0.4em 0.8em;
 }
 /** /ТЕКСТОВА ЧАСТИНА БЛОКІВ **/
+
+
+
+/** АНІМАЦІЙНА МОДЕЛЬ ГЕРОЯ **/
+img[alt="VenomancerGifAnimation"] {
+    width: 30%;
+    height: 30%;
+    border: 10px solid rgba(173, 198, 9, .5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .7);
+}
+/** /АНІМАЦІЙНА МОДЕЛЬ ГЕРОЯ **/
 
 /** ІКОНКА ГЕРОЯ **/
 .venoIcon {
@@ -187,24 +201,38 @@ video {
 
 /** БЛОКИ ПІД ЗАГОЛОВКАМИ **/
 .underRowBlock {
-    flex-direction: row;
-    justify-content: center;
-    height: 50px;
-    margin: 0.2em;
-    list-style: none;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    margin-bottom: 1em;
+    font-size: 1em;
+    background-color: transparent;
 }
-.underRowBlock li {
+.underRowBlock tr {
+    flex-direction: row;
+    width: 100%;
+    margin: 0.2em;
+}
+.underRowBlock tr td:first-child {
     justify-content: center;
-    align-items: center;
-    padding: 0 0.8em;
-    font-size: 1.2em;
+    width: 30%;
+    padding: 0 0.6em;
+    background-color: rgba(173, 198, 9, .4);
 }
 .underRowBlock img {
     height: 24px;
-    padding: 0 0.4em;
+    margin: 0.4em 0.1em;
 }
 .underRowBlock img[alt="Agility"] {
     height: 33px;
+}
+.underRowBlock tr td:last-child {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border-left: 1px solid rgba(173, 198, 9, .9);
+    background-color: rgba(173, 198, 9, .2);
 }
 /** /БЛОКИ ПІД ЗАГОЛОВКАМИ **/
 
@@ -251,79 +279,95 @@ video {
 /** /АТРИБУТИ **/
 
 /** ВМІННЯ **/
-.skillBlock {
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: center;
-    width: 24.5%;
+.skillTableSection {
+    width: 48%;
     height: 100%;
-    margin-top: 1.2em;
-}
-.skillBlock:hover {
-    box-shadow: 0 1px 4px #212121;
-}
-.skillTable {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-.skillTable tr {
-    justify-content: center;
-    padding: 0 0.4em;
-}
-.skillTable td {
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0.2em 0;
-    padding: 0;
-    font-size: 0.76em;
+    margin-top: 3em;
     background-color: transparent;
 }
-.skillTable p {
-    margin: 0.2em 0;
-    font-size: 1.1em;
-    font-weight: 400;
-    font-style: italic;
+.skillTableSection:hover {
+    box-shadow: 0 1px 4px rgba(33, 33, 33, .7);
 }
-.skillTable tr:nth-child(odd) {
-    background-color: rgba(173, 198, 9, .5);
+.skillTable2 {
+    flex-flow: column wrap;
+    width: 100%;
+    padding: 0.2em;
+    font-size: 0.85em;
+    background-color: transparent;
 }
-.skillTable tr:nth-child(even) {
-    background-color: rgba(173, 198, 9, .3);
+.skillTable2 tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.2em 0.4em;
 }
-.skillTable tr,
-.skillTable td:first-child {
+.skillTable2 thead tr:first-child {
+    width: 104%;
+    margin-left: -2%;
+}
+.skillTable2 tr:nth-child(odd) {
+    background-color: rgba(173, 198, 9, .4);
+}
+.skillTable2 tr:nth-child(even) {
+    background-color: rgba(173, 198, 9, .6);
+}
+.skillTable2 td {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+.skillTable2 tbody tr:first-child, 
+.skillTable2 td:first-child {
+    justify-content: flex-start;
     font-weight: 700;
 }
-.skillImg img {
-    width: 90%;
-    margin-top: -3em;
-    border: 3px solid rgba(173, 198, 9, 1);
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, .7);
+.skillTable2 thead tr {
+    width: 100%;
+    padding: 0;
 }
-.skillTable td:nth-child(2),
-.skillTable td:last-child {
-    justify-content: center;
-    text-align: right;
-}
-.skillTable tr:first-child {
+.skillTable2 thead th {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: -0.6em;
+    padding: 0 0.4em;
     background-color: #fafafa;
     border-bottom: 2px solid rgba(173, 198, 9, 1);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
 }
-.skillTable tr:first-child td:last-child {
+.skillTable2 thead img {
+    width: 35%;
+    margin-top: -2em;
+    padding: 0.4em;
+    background-color: rgba(173, 198, 9, .4);
+    box-shadow: 0 1px 4px rgba(33, 33, 33, .7);
+}
+.skillTable2 thead h1 {
     color: rgba(173, 198, 9, 1);
-    font-size: 1.1em;
-    line-height: 1.8;
+    font-size: 1.8em;
     letter-spacing: 0.1em;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .7);
+    text-shadow: 0 1px 1px rgba(33, 33, 33, .7);
 }
-.skillTable tr:nth-child(3) td {
-    font-size: 0.7em;
-    font-weight: 400; 
+.skillTable2 tbody tr:nth-child(2) td {
+    font-size: 0.85em;
+    font-weight: 400;
 }
-.skillTable tr:nth-last-child(-n+2) img {
+.skillTable2 p {
+    padding: 0.8em 0;
+    font-style: italic;
+}
+.skillTable2 tfoot td img {
     margin: 0 auto;
+    padding: 0.2em;
 }
 /** /ВМІННЯ **/
 
@@ -358,6 +402,12 @@ video {
   /* Оба сайдбара располагаются в одной строке */
     * {
         font-size: 1.1em;
+    }
+    .wrapperMain {
+        width: 320px;
+    }
+    .wrapperContent {
+        width: 300px;
     }
     .header {
         background-image: url(imgsBack/venomancerIcon.png);
@@ -406,73 +456,6 @@ video {
         text-align: center;
         margin-left: -0.45em;
     }
-    .wrapperMain {
-        width: 320px;
-    }
-    .wrapperContent {
-        width: 300px;
-    }
-    .textBlock {
-        flex-flow: column wrap;
-        justify-content: center;
-        padding: 0.2em;
-    }
-    .textBlock p {
-        font-size: 0.8em;
-        line-height: 1.4;
-    }
-    .skillBlock {
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        margin-top: 5em;
-        font-size: 0.6em;
-    }
-    .skillBlock:first-child {
-        margin-top: 2.8em;
-    }
-    .skillTable tr:first-child {
-        padding: 0 0.6em;
-    }
-    .skillImg img {
-        width: 75%;
-        margin-top: -3em;
-        border: 3px solid rgba(173, 198, 9, 1);
-        box-shadow: 2px 2px 3px rgba(0, 0, 0, .7);
-    }
-    .statsTable {
-        width: 100%;
-        height: 100%;
-        margin: 0 auto;
-        font-size: 0.4em;
-    }
-    .underRowBlock {
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        list-style: none;
-        margin-left: -1.2em;
-        margin-top: -0.4em;
-    }
-    .underRowBlock li {
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        width: 100%;
-        padding: 0.4em 0.8em;
-        font-size: 0.6em;
-    }
-    .underRowBlock li img {
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-        
-    }
     .rowTag {
         flex-direction: row;
         justify-content: center;
@@ -490,34 +473,21 @@ video {
         font-size: 1em;
         text-align: center;
     }
-    .rowTagHeroName:after {
-        content: url(imgsBack/venomancerIcon.png);
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-    }
-    .navigation {
-        position: inherit;
-        height: 100%;
-        width: 100%;
-        display: flex;
+    .textBlock {
         flex-flow: column wrap;
         justify-content: center;
-        align-items: center;
-    }
-    .navigation ul {
+        padding: 0.2em;
         height: 100%;
-        flex-direction: column;
-        justify-content: space-between;
-        list-style: none;
     }
-    .navigation ul li a {
-        flex-direction: row;
-        justify-content: center;
-        color: rgba(173, 198, 9, .5);
-        font-size: 1.4em;
-        text-align: right;
-        text-decoration: none;
+    .textBlock p {
+        font-size: 0.8em;
+        line-height: 1.4;
+    }
+    .statsTable {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        font-size: 0.4em;
     }
     .statsTable th {
         width: 100%;
@@ -532,11 +502,38 @@ video {
         text-shadow: 1px 1px 1px rgba(0, 0, 0, .7);
         box-shadow: 0 1px 1px rgba(0, 0, 0, .7);
     }
+    .skillTableSection {
+        width: 100%;
+        height: 100%;
+        margin-top: 3em;
+        background-color: transparent;
+    }
+    .skillTable2 {
+        width: 100%;
+        padding: 0.2em;
+        font-size: 0.5em;
+        background-color: transparent;
+    }
+    .skillTable2 thead img {
+        width: 48%;
+        padding: 0.2em;
+    }
+    .skillTable2 thead h1 {
+        color: rgba(173, 198, 9, 1);
+        font-size: 1.2em;
+        letter-spacing: 0.1em;
+        text-shadow: 0 1px 1px rgba(33, 33, 33, .7);
+    }
+    .skillTable2 tbody tr:nth-child(2) td {
+        font-size: 0.8em;
+        font-weight: 400;
+    }
     .infoList {
         flex-direction: column;
         align-items: center;
         list-style: none;
         height: 100%;
+        width: 100%;
         font-size: 0.8em;
         margin-top: -1em;
     }
@@ -569,3 +566,7 @@ video {
         width: 35%;
     }
 }
+
+
+
+
