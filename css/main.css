@@ -365,7 +365,7 @@ video {
         background-position: center;
         background-color: none;
         width: 100%;
-        height: 32px;
+        height: 100%;
     }
     .bigLettersHero {
         position: inherit;
@@ -392,6 +392,7 @@ video {
         justify-content: center;
         align-items: center;
         width: 100%;
+        height: 100%;
     }
     .navigation ul {
         height: 100%;
@@ -443,6 +444,7 @@ video {
     }
     .statsTable {
         width: 100%;
+        height: 100%;
         margin: 0 auto;
         font-size: 0.4em;
     }
@@ -534,6 +536,7 @@ video {
         flex-direction: column;
         align-items: center;
         list-style: none;
+        height: 100%;
         font-size: 0.8em;
         margin-top: -1em;
     }
