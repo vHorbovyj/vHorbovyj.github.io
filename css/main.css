@@ -536,8 +536,8 @@ img[alt="VenomancerGifAnimation"] {
 
     /** АНІМАЦІЙНА МОДЕЛЬ ГЕРОЯ **/
     img[alt="VenomancerGifAnimation"] {
-        width: 70%;
-        height: 70%;
+        width: 80vw;
+        height: 46vh;
         margin-top: 5em;
         border: 10px solid rgba(173, 198, 9, .5);
         box-shadow: 0 2px 5px rgba(0, 0, 0, .7);
