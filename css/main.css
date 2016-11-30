@@ -408,14 +408,14 @@ img[alt="VenomancerGifAnimation"] {
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
-        width: 1140px;
+        width: 320px;
         margin: 0 auto;
     }
     .wrapperContent {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 840px;
+        width: 300px;
     }
     /** /ОБГОРТКИ **/
 
@@ -493,7 +493,7 @@ img[alt="VenomancerGifAnimation"] {
         margin-top: 0.2em;
         padding: 0.2em;
         color: rgba(173, 198, 9, 1);
-        font-size: 2.8em;
+        font-size: 1.8em;
         font-style: italic;
         line-height: 1;
         background-color: rgba(173, 198, 9, .2);
@@ -526,8 +526,9 @@ img[alt="VenomancerGifAnimation"] {
 
     /** АНІМАЦІЙНА МОДЕЛЬ ГЕРОЯ **/
     img[alt="VenomancerGifAnimation"] {
-        width: 30%;
-        height: 30%;
+        width: 70%;
+        height: 70%;
+        margin-top: 5em;
         border: 10px solid rgba(173, 198, 9, .5);
         box-shadow: 0 2px 5px rgba(0, 0, 0, .7);
     }
@@ -587,7 +588,7 @@ img[alt="VenomancerGifAnimation"] {
     .statsTable {
         width: 100%;
         margin: 0 auto;
-        font-size: 0.8em;
+        font-size: 0.45em;
     }
     .statsTable tr, th, td {
         border: none;
@@ -627,7 +628,7 @@ img[alt="VenomancerGifAnimation"] {
 
     /** ВМІННЯ **/
     .skillTableSection {
-        width: 48%;
+        width: 100%;
         height: 100%;
         margin-top: 3em;
         background-color: transparent;
@@ -639,7 +640,7 @@ img[alt="VenomancerGifAnimation"] {
         flex-flow: column wrap;
         width: 100%;
         padding: 0.2em;
-        font-size: 0.85em;
+        font-size: 0.45em;
         background-color: transparent;
     }
     .skillTable2 tr {
