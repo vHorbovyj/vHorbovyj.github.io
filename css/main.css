@@ -550,7 +550,7 @@ img[alt="VenomancerGifAnimation"] {
         width: 100%;
         height: 100%;
         margin-bottom: 1em;
-        font-size: 1em;
+        font-size: 0.6em;
         background-color: transparent;
     }
     .underRowBlock tr {
@@ -564,14 +564,15 @@ img[alt="VenomancerGifAnimation"] {
         width: 100%;
     }
     .underRowBlock tr td:first-child {
-        width: 100%;
+        width: 50%;
         padding: 0 0.4em;
-        background-color: rgba(173, 198, 9, .4);
+        background-color: transparent;
     }
     .underRowBlock tr td:last-child {
-        width: 100%;
-        border-left: 1px solid rgba(173, 198, 9, 1);
-        background-color: rgba(173, 198, 9, .2);
+        justify-content: flex-start;
+        padding: 0 0.4em;
+        border-left: none;
+        background-color: transparent;
     }
     .underRowBlock img {
         width: 24px;
@@ -695,7 +696,7 @@ img[alt="VenomancerGifAnimation"] {
     .skillTable2 thead img {
         width: 35%;
         margin-top: -2em;
-        padding: 0.4em;
+        padding: 0.2em;
         background-color: rgba(173, 198, 9, .4);
         box-shadow: 0 1px 4px rgba(33, 33, 33, .7);
     }
@@ -729,7 +730,7 @@ img[alt="VenomancerGifAnimation"] {
         flex-direction: column;
         align-items: center;
         list-style: none;
-        font-size: 1.2em;
+        font-size: 0.8em;
     }
     .infoList li {
         margin: 0.2em 0;
