@@ -424,8 +424,12 @@ img[alt="VenomancerGifAnimation"] {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 660px;
+        height: 100vh;
+        width: 100vw;
         background-image: url(imgsBack/venoHead.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
     .overlayColor {
         height: 100%;
@@ -433,34 +437,39 @@ img[alt="VenomancerGifAnimation"] {
         background-color: rgba(173, 198, 9, .2);
     }
     .bigLettersHero {
-        position: fixed;
-        top: 0;
-        left: -36vw;
+        position: inherit;
+        display: flex;
+        justify-content: center;
         width: 100%;
-        padding-left: 12%;
+        padding-left: 0;
+        margin-top: -190vh;
         color: rgba(173, 198, 9, .5);
-        font-size: 4em;
+        font-size: 1.8em;
         text-transform: uppercase;
         letter-spacing: 0.1em;
         border-bottom: 2px solid rgba(173, 198, 9, .5);
-        -ms-transform: rotate(270deg);
-        -moz-transform: rotate(270deg);
-        -webkit-transform: rotate(270deg);
-        transform: rotate(270deg);
+        -ms-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
     }
     /** /ШАПКА **/
 
     /** НАВІГАЦІЯ САЙТОМ **/
     .navigation {
-        position: fixed;
-        top: 35%;
-        height: 30%;
-        right: 10vw;
+        flex-direction: row;
+        justify-content: center;
+        position: inherit;
+        width: 100%;
+        height: 100%;
+        margin-top: -10vh;
     }
     .navigation ul {
+        width: 100%;
         height: 100%;
-        flex-direction: column;
-        justify-content: space-between;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         list-style: none;
     }
     .navigation ul li {
@@ -474,10 +483,10 @@ img[alt="VenomancerGifAnimation"] {
     }
     .navigation ul li a {
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: center;
         color: rgba(173, 198, 9, .5);
-        font-size: 1.4em;
-        text-align: right;
+        font-size: 0.8em;
+        text-align: center;
         text-decoration: none;
     }
     .navigation ul li a:hover {
@@ -521,6 +530,7 @@ img[alt="VenomancerGifAnimation"] {
         text-align: center;
         margin: 0;
         padding: 0.4em 0.8em;
+        font-size: 0.68em;
     }
     /** /ТЕКСТОВА ЧАСТИНА БЛОКІВ **/
 
