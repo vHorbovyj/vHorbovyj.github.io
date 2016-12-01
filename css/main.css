@@ -25,7 +25,8 @@ video {
 /** ЗАДАЄМО DISPLAY:FLEX ДЛЯ ЕЛЕМЕНТІВ **/
 .wrapperMain, 
 .header, 
-.wrapperContent, 
+.wrapperContent,
+.navigation, 
 .navigation ul, 
 .navigation ul li a, 
 .rowTag, 
@@ -33,8 +34,7 @@ video {
 .textBlock, 
 .venoIcon, 
 .underRowBlock,
-.underRowBlock tr, 
-.underRowBlock td, 
+.underRowBlock li, 
 .skillBlock, 
 .skillTable, 
 .skillTable tr, 
@@ -105,36 +105,37 @@ video {
 /** /ШАПКА **/
 
 /** НАВІГАЦІЯ САЙТОМ **/
-.navigation {
+nav {
     position: fixed;
-    top: 35%;
-    height: 30%;
+    top: 32.5%;
     right: 10vw;
+    height: 35%;
 }
-.navigation ul {
+.navigation {
+    width: 100%;
     height: 100%;
     flex-direction: column;
     justify-content: space-between;
     list-style: none;
 }
-.navigation ul li {
+.navigation li {
+    text-align: right;
     margin: 0.1em 0;
     padding: 0 0.2em;
     border-right: 3px solid rgba(173, 198, 9, 0);
 }
-.navigation ul li:hover {
+.navigation li:hover {
     padding: 0 0.2em;
     border-right: 3px solid rgba(173, 198, 9, 1);
 }
-.navigation ul li a {
+.navigation li a {
     flex-direction: row;
     justify-content: flex-end;
     color: rgba(173, 198, 9, .5);
     font-size: 1.4em;
-    text-align: right;
     text-decoration: none;
 }
-.navigation ul li a:hover {
+.navigation li a:hover {
     color: rgba(173, 198, 9, 1);
     transform: translate(-0.3rem);
 }
@@ -157,10 +158,11 @@ video {
 }
 .rowTagHeroName {
     justify-content: center;
-    margin: 0.4em;
+    margin: 0;
     height: 32px;
     color: rgba(173, 198, 9, 1);
     font-size: 1.8em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .7);
 }
 /** /ЗАГОЛОВКИ **/
 
@@ -170,19 +172,31 @@ video {
     justify-content: space-around;
     align-items: flex-start;
     padding: 0.2em;
+    margin-top: 0.8em;
 }
 .textBlock p {
-    text-align: center;
     margin: 0;
     padding: 0.4em 0.8em;
+    font-size: 1.05em;
+    text-indent: 1em;
+}
+.textBlock p::first-letter {
+    color: rgba(173, 198, 9, 1);
+    font-size: 1.28em;
+    font-style: italic;
+}
+.textIndent {
+    text-indent: 1em;
+    display: flex;
 }
 /** /ТЕКСТОВА ЧАСТИНА БЛОКІВ **/
 
 /** АНІМАЦІЙНА МОДЕЛЬ ГЕРОЯ **/
 img[alt="VenomancerGifAnimation"] {
-    width: 30%;
-    height: 30%;
-    border: 10px solid rgba(173, 198, 9, .5);
+    width: 25%;
+    height: 25%;
+    float: left;
+    margin-right: 1em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .7);
 }
 /** /АНІМАЦІЙНА МОДЕЛЬ ГЕРОЯ **/
@@ -199,32 +213,19 @@ img[alt="VenomancerGifAnimation"] {
 
 /** БЛОКИ ПІД ЗАГОЛОВКАМИ **/
 .underRowBlock {
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 1em;
-    font-size: 1em;
-    background-color: transparent;
-}
-.underRowBlock tr {
     flex-direction: row;
     width: 100%;
-    margin: 0.2em;
+    height: 100%;
+    margin: 0 0 0.8em 0;
+    padding: 0.2em;
+    list-style: none;
 }
-.underRowBlock td {
+.underRowBlock li {
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-}
-.underRowBlock tr td:first-child {
-    width: 100%;
-    padding: 0 0.4em;
-    background-color: rgba(173, 198, 9, .4);
-}
-.underRowBlock tr td:last-child {
-    width: 100%;
-    border-left: 1px solid rgba(173, 198, 9, 1);
-    background-color: rgba(173, 198, 9, .2);
+    font-size: 1.1em;
 }
 .underRowBlock img {
     width: 24px;
@@ -240,8 +241,8 @@ img[alt="VenomancerGifAnimation"] {
 /** АТРИБУТИ **/
 .statsTable {
     width: 100%;
-    margin: 0 auto;
     font-size: 0.8em;
+    margin-top: 1em;
 }
 .statsTable tr, th, td {
     border: none;
@@ -363,8 +364,12 @@ img[alt="VenomancerGifAnimation"] {
     font-weight: 400;
 }
 .skillTable2 p {
-    padding: 0.8em 0;
+    padding: 0.8em 0.2em;
+    font-size: 1.1em;
     font-style: italic;
+}
+.skillTable2 p::first-letter {
+    color: #212121;
 }
 .skillTable2 tfoot td img {
     margin: 0 auto;
@@ -402,8 +407,9 @@ img[alt="VenomancerGifAnimation"] {
 @media only screen and (min-device-width : 320px)  and (max-device-width : 480px) {
   /* Оба сайдбара располагаются в одной строке */
     * {
-        font-size: 1.1em;
+        font-size: 1em;
     }
+    /** ОБГОРТКИ **/
     .wrapperMain {
         flex-flow: row wrap;
         justify-content: center;
@@ -421,14 +427,9 @@ img[alt="VenomancerGifAnimation"] {
 
     /** ШАПКА **/
     .header {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         height: 100vh;
-        width: 100vw;
         background-image: url(imgsBack/venoHead.jpg);
         background-size: cover;
-        background-repeat: no-repeat;
         background-position: center;
     }
     .overlayColor {
@@ -437,17 +438,17 @@ img[alt="VenomancerGifAnimation"] {
         background-color: rgba(173, 198, 9, .2);
     }
     .bigLettersHero {
-        position: inherit;
-        display: flex;
-        justify-content: center;
-        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 5vw;
+        margin: 0;
         padding-left: 0;
-        margin-top: -190vh;
-        color: rgba(173, 198, 9, .5);
-        font-size: 1.8em;
+        color: rgba(255, 255, 255, .7);
+        font-size: 7em;
+        overflow-wrap: break-word;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        border-bottom: 2px solid rgba(173, 198, 9, .5);
+        border-bottom: none;
         -ms-transform: rotate(0);
         -moz-transform: rotate(0);
         -webkit-transform: rotate(0);
@@ -456,42 +457,40 @@ img[alt="VenomancerGifAnimation"] {
     /** /ШАПКА **/
 
     /** НАВІГАЦІЯ САЙТОМ **/
+    nav {
+        position: fixed;
+        top: 86%;
+        right: 0;
+        height: 12%;
+        width: 100%;
+    }
     .navigation {
-        flex-direction: row;
-        justify-content: center;
-        position: inherit;
+        flex-flow: row wrap;
+        justify-content: flex-start;
         width: 100%;
         height: 100%;
-        margin-top: -10vh;
-    }
-    .navigation ul {
-        width: 100%;
-        height: 100%;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
         list-style: none;
+        background-color: rgba(173, 198, 9, .4);
     }
-    .navigation ul li {
+    .navigation li {
+        justify-content: center;
+        text-align: center;
         margin: 0.1em 0;
-        padding: 0 0.2em;
+        padding: 0.2em;
         border-right: 3px solid rgba(173, 198, 9, 0);
     }
-    .navigation ul li:hover {
-        padding: 0 0.2em;
-        border-right: 3px solid rgba(173, 198, 9, 1);
+    .navigation li:hover {
+        border-right: 3px solid rgba(173, 198, 9, 0);
     }
-    .navigation ul li a {
-        flex-direction: row;
-        justify-content: center;
-        color: rgba(173, 198, 9, .5);
-        font-size: 0.8em;
-        text-align: center;
+    .navigation li a {
+        color: rgba(255, 255, 255, .7);
+        font-size: 1.4em;
         text-decoration: none;
     }
-    .navigation ul li a:hover {
-        color: rgba(173, 198, 9, 1);
-        transform: translate(-0.3rem);
+    .navigation li a:hover {
+        color: rgba(255, 255, 255, 1);
+        text-shadow: 0 1px 1px rgba(33, 33, 33, .7);
+        transform: translate(0);
     }
     /** /НАВІГАЦІЯ САЙТОМ **/
 
@@ -502,7 +501,7 @@ img[alt="VenomancerGifAnimation"] {
         margin-top: 0.2em;
         padding: 0.2em;
         color: rgba(173, 198, 9, 1);
-        font-size: 1.8em;
+        font-size: 2.8em;
         font-style: italic;
         line-height: 1;
         background-color: rgba(173, 198, 9, .2);
@@ -512,10 +511,12 @@ img[alt="VenomancerGifAnimation"] {
     }
     .rowTagHeroName {
         justify-content: center;
-        margin: 0.4em;
+        margin: 0;
+        padding: 0 1em;
         height: 32px;
         color: rgba(173, 198, 9, 1);
-        font-size: 1.8em;
+        font-size: 1.6em;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, .7);
     }
     /** /ЗАГОЛОВКИ **/
 
@@ -525,21 +526,31 @@ img[alt="VenomancerGifAnimation"] {
         justify-content: space-around;
         align-items: flex-start;
         padding: 0.2em;
+        margin-top: 0.8em;
     }
     .textBlock p {
-        text-align: center;
         margin: 0;
         padding: 0.4em 0.8em;
-        font-size: 0.68em;
+        font-size: 1.05em;
+        text-indent: 1em;
+    }
+    .textBlock p::first-letter {
+        color: rgba(173, 198, 9, 1);
+        font-size: 1.28em;
+        font-style: italic;
+    }
+    .textIndent {
+        text-indent: 1em;
+        display: flex;
     }
     /** /ТЕКСТОВА ЧАСТИНА БЛОКІВ **/
 
     /** АНІМАЦІЙНА МОДЕЛЬ ГЕРОЯ **/
     img[alt="VenomancerGifAnimation"] {
-        width: 80vw;
-        height: 46vh;
-        margin-top: 5em;
-        border: 10px solid rgba(173, 198, 9, .5);
+        width: 65%;
+        height: 65%;
+        float: none;
+        margin: 4em 0 1em 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, .7);
     }
     /** /АНІМАЦІЙНА МОДЕЛЬ ГЕРОЯ **/
@@ -559,30 +570,16 @@ img[alt="VenomancerGifAnimation"] {
         flex-direction: column;
         width: 100%;
         height: 100%;
-        margin-bottom: 1em;
-        font-size: 0.6em;
-        background-color: transparent;
+        margin: -0.8em 0 0.8em 0;
+        padding: 0.2em;
+        list-style: none;
     }
-    .underRowBlock tr {
-        flex-direction: row;
-        width: 100%;
-        margin: 0.2em;
-    }
-    .underRowBlock td {
+    .underRowBlock li {
+        flex-flow: column;
         justify-content: center;
         align-items: center;
         width: 100%;
-    }
-    .underRowBlock tr td:first-child {
-        width: 50%;
-        padding: 0 0.4em;
-        background-color: transparent;
-    }
-    .underRowBlock tr td:last-child {
-        justify-content: flex-start;
-        padding: 0 0.4em;
-        border-left: none;
-        background-color: transparent;
+        font-size: 1.1em;
     }
     .underRowBlock img {
         width: 24px;
@@ -598,8 +595,8 @@ img[alt="VenomancerGifAnimation"] {
     /** АТРИБУТИ **/
     .statsTable {
         width: 100%;
-        margin: 0 auto;
-        font-size: 0.45em;
+        font-size: 0.8em;
+        margin-top: 1em;
     }
     .statsTable tr, th, td {
         border: none;
@@ -651,7 +648,7 @@ img[alt="VenomancerGifAnimation"] {
         flex-flow: column wrap;
         width: 100%;
         padding: 0.2em;
-        font-size: 0.45em;
+        font-size: 0.85em;
         background-color: transparent;
     }
     .skillTable2 tr {
@@ -706,7 +703,7 @@ img[alt="VenomancerGifAnimation"] {
     .skillTable2 thead img {
         width: 35%;
         margin-top: -2em;
-        padding: 0.2em;
+        padding: 0.4em;
         background-color: rgba(173, 198, 9, .4);
         box-shadow: 0 1px 4px rgba(33, 33, 33, .7);
     }
@@ -721,8 +718,12 @@ img[alt="VenomancerGifAnimation"] {
         font-weight: 400;
     }
     .skillTable2 p {
-        padding: 0.8em 0;
+        padding: 0.8em 0.2em;
+        font-size: 1.1em;
         font-style: italic;
+    }
+    .skillTable2 p::first-letter {
+        color: #212121;
     }
     .skillTable2 tfoot td img {
         margin: 0 auto;
@@ -739,19 +740,16 @@ img[alt="VenomancerGifAnimation"] {
     .infoList {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         list-style: none;
-        font-size: 0.8em;
+        font-size: 1.2em;
+        padding: 0.8em;
     }
     .infoList li {
         margin: 0.2em 0;
         padding: 0.2em 0;
     }
-    .infoList li a {
-        text-decoration: none;
-        font-weight: 700;
-        color: #212121;
-        border-bottom: 2px solid rgba(173, 198, 9, 0);
-    }
+    /** /ПІДВАЛ **/
 }
 /* Экраны среднего размера */
 @media all and (min-width: 600px) {
