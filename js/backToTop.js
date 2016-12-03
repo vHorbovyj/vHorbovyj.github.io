@@ -2,7 +2,7 @@ $(document).ready(function(){
 		$(".backToTop").hide();
 		$(function () {
 			$(window).scroll(function () {
-				if ($(this).scrollTop() > 450) {
+				if ($(this).scrollTop() > 50) {
 					$('.backToTop').fadeIn();
 				} else {
 					$('.backToTop').fadeOut();
