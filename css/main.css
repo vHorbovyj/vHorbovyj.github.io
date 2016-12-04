@@ -24,7 +24,12 @@ video {
     width: 1140px;
     margin: 0 auto;
 }
-
+header {
+    height: 200%;
+}
+main {
+    height: 200%;
+}
 /* Задаём всем элеметам ширину в 100% */
 nav[role="navigation"] {
     position: fixed;
@@ -95,15 +100,81 @@ nav[role="navigation"] li a:hover {
     justify-content: center;
     color: #212121;
 }
-.about-me-text h1 {
-    
-}
 .about-me-text p {
     padding: 1em 0;
     border: 2px solid #212121;
     border-right: none;
     border-left: none;
 }
+.forMobileOnly {
+    display: none;
+}
+
+.my-jobs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #212121;
+}
+.my-jobs h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 2px solid #212121;
+    padding-bottom: 0.2em;
+}
+.my-jobs-presentations {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+.presentation-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    padding: 0.3em 2em;
+    margin-top: 1%;
+    border: 1px solid #e0e0e0;
+}
+.presentation-block:hover {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .7);
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+
+.presentation-block h1 {
+    width: 90%;
+    border: none;
+    font-size: 2.4em;
+    padding: 0;
+}
+
+.presentation-block img,
+.presentation-block a,
+.presentation-block p {
+    padding-bottom: 0.6em;
+    margin: 0;
+}
+.presentation-block a {
+    color: chocolate;
+    letter-spacing: 0.05em;
+    font-size: 1.1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @-webkit-keyframes rotating {
     0% { -webkit-transform: rotate(0deg); }
 	100% { -webkit-transform: rotate(360deg); }
@@ -123,22 +194,17 @@ nav[role="navigation"] li a:hover {
         border-bottom: 1px solid #bdbdbd;
     }
     a.nav-mini-logo {
-        display: block;
-        width: 14%;
-        height: 100%;
-        float: left;
+        display: none;
     }
     nav[role="navigation"] img {
-        height: 6vh;
-        width: 90%;
-        margin-top: 2vh;
+        display: none;
     }
     nav[role="navigation"] ul {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: flex-end;
-        width: 86%;
+        width: 100%;
         height: 100%;
     }
     nav[role="navigation"] li a {
@@ -176,7 +242,7 @@ nav[role="navigation"] li a:hover {
     }
     .about-me-text {
         width: 100%;
-        height: auto;
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -191,6 +257,60 @@ nav[role="navigation"] li a:hover {
         border-right: none;
         border-left: none;
         
+    }
+    .my-jobs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #212121;
+    }
+    .my-jobs h1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-bottom: 2px solid #212121;
+        padding-bottom: 0.2em;
+    }
+    .my-jobs-presentations {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-bottom: 2%;
+    }
+    .presentation-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0.3em 2em;
+        margin-top: 1%;
+        margin-bottom: 2%;
+        border: 1px solid #e0e0e0;
+    }
+    .presentation-block:hover {
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .7);
+        border: 1px solid rgba(255, 255, 255, 0);
+    }
+
+
+    .presentation-block h1 {
+        width: 90%;
+        border: none;
+        font-size: 2.4em;
+        padding: 0;
+    }
+
+    .presentation-block img,
+    .presentation-block a,
+    .presentation-block p {
+        padding-bottom: 0.6em;
+        margin: 0;
+    }
+    .presentation-block a {
+        color: chocolate;
+        letter-spacing: 0.05em;
+        font-size: 1.1em;
     }
 }
 /* Экраны среднего размера */
