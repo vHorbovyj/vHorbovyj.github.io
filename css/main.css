@@ -154,12 +154,16 @@ nav[role="navigation"] li a:hover {
     height: 47%;
     padding-left: 5.4%;
     padding-top: 5%;
+    position: relative;
+    z-index: -1;
 }
 .devices-img-tablet {
     width: 44.3%;
     height: 51%;
     padding-left: 3.8%;
     padding-top: 24%;
+    position: relative;
+    z-index: -1;
 }
 .devices-img-mobile {
     width: 51.6%;
@@ -167,7 +171,8 @@ nav[role="navigation"] li a:hover {
     padding-left: 38%;
     padding-top: 18.9%;
     position: relative;
-    top: -2.1%;
+    top: -2%;
+    z-index: -1;
 }
 .presentation-block h1 {
     width: 90%;
