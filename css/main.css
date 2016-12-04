@@ -143,8 +143,32 @@ nav[role="navigation"] li a:hover {
     box-shadow: 0 1px 4px rgba(0, 0, 0, .7);
     border: 1px solid rgba(255, 255, 255, 0);
 }
-
-
+.devices-img {
+    width: 100%;
+    height: 170px;
+    background-image: url(imgsBack/devices.svg);
+    background-repeat: no-repeat;
+}
+.devices-img-desktop {
+    position: absolute;
+    padding-top: 0.8%;
+    padding-left: 0.85%;
+    width: 14.6%;
+    height: 18%;
+    z-index: -1;
+}
+.devices-img-tablet {
+    position: absolute;
+    padding-top: 4.3%;
+    padding-left: 11.8%;
+    width: 17.2%;
+}
+.devices-img-mobile {
+    position: absolute;
+    padding-top: 8.7%;
+    padding-left: 18.45%;
+    width: 20%;
+}
 .presentation-block h1 {
     width: 90%;
     border: none;
@@ -225,24 +249,25 @@ nav[role="navigation"] li a:hover {
         justify-content: center;
         width: 100%;
         padding: 0;
-        height: 100vh;
+        height: auto;
         padding-top: 10vh;
         background-color: #f5f5f5;
     }
     .about-me-img {
         width: 100%;
         height: auto;
-        padding: 2em 1em;
+        padding: 1em 0;
         display: flex;
         justify-content: center;
     }
     .about-me-img img {
-        width: 70%;
+        width: 90%;
         height: 400px;
     }
     .about-me-text {
-        width: 100%;
-
+        width: 90%;
+        padding: 0;
+        margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -282,7 +307,8 @@ nav[role="navigation"] li a:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 90%;
+        margin-left: 5%;
         padding: 0.3em 2em;
         margin-top: 1%;
         margin-bottom: 2%;
@@ -300,7 +326,7 @@ nav[role="navigation"] li a:hover {
         font-size: 2.4em;
         padding: 0;
     }
-
+    
     .presentation-block img,
     .presentation-block a,
     .presentation-block p {
