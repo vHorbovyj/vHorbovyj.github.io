@@ -24,12 +24,7 @@ video {
     width: 1140px;
     margin: 0 auto;
 }
-header {
-    height: 200%;
-}
-main {
-    height: 200%;
-}
+
 /* Задаём всем элеметам ширину в 100% */
 nav[role="navigation"] {
     position: fixed;
@@ -145,7 +140,7 @@ nav[role="navigation"] li a:hover {
 }
 .devices-img {
     width: 100%;
-    height: 350.926px;
+    height: 351px;
     background-image: url(imgsBack/devices.svg);
     background-repeat: no-repeat;
 }
