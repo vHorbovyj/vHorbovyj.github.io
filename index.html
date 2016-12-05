@@ -6,28 +6,31 @@
 <html lang="uk">
 <head> 
 <meta charset=utf-8>
-<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no" />
 <title>Volodymyr Horbovyj</title>
 <link href="css/normalize.css" rel="stylesheet" />
 <link href="css/skeleton.css" rel="stylesheet" />
 <link href="css/main.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="js/scroll.js"></script>
 </head>
     <body>
         <div class="wrapper">
             
-            <header>
+            <header id="about-me-anchor">
                 <nav role="navigation">
                     <a class="nav-mini-logo" href="#"><img src="img/7krHLj1N.png" alt="logo" /></a>
-                    <ul>
-                        <li><a href="#">Text1</a></li>
-                        <li><a href="#">Text2</a></li>
-                        <li><a href="#">Text3</a></li>
-                        <li><a href="#">Text4</a></li>
+                    <ul class="nav">
+                        <li><a href="#about-me-anchor">Про мене</a></li>
+                        <li><a href="#my-jobs-anchor">Мої роботи</a></li>
+                        <li><a href="#write-to-me-anchor">Написати мені</a></li>
+                        <li><a href="#contacts-anchor">Контакти</a></li>
                     </ul>
                 </nav>
                 <div class="about-me-block">
                     <section class="about-me-img">
-                        <img src="img/mePhoto.jpg" alt="myPhoto" />
+                        <img src="img/mePhoto.jpg" alt="mePhoto" />
+                        <img src="img/mePhoto2.jpg" alt="mePhotoMobileVersion" />
                     </section>
                     <section class="about-me-text">
                         <h1>Volodymyr Horbovyj</h1>
@@ -36,7 +39,7 @@
                 </div>
             </header>
             
-            <main>
+            <main id="my-jobs-anchor">
                 <div class="my-jobs">
                     <h1>My jobs</h1>
                     <section class="my-jobs-presentations">
@@ -80,9 +83,12 @@
                 </div>
             </main>
             
-            <footer>
+            <aside id="write-to-me-anchor">
             
-                <img class="forMobileOnly" src="img/7krHLj1N.png" alt="meLogo" />
+            </aside>
+            
+            <footer id="contacts-anchor">
+
             </footer>
         </div>
     </body>
