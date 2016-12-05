@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$(".newsNav").on("click","a", function (event) {
+	$(".nav").on("click","a", function (event) {
 
 		event.preventDefault();
 
