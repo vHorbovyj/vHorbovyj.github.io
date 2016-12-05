@@ -34,13 +34,30 @@ nav[role="navigation"] {
     width: 100%;
     background-color: rgba(245, 245, 245, .4);
     border-bottom: 1px solid rgba(189, 189, 189, .7);
+    z-index: 1;
+    opacity: .5;
+}
+nav[role="navigation"]:hover {
+    background-color: rgba(245, 245, 245, .4);
+    opacity: 1;
 }
 a.nav-mini-logo {
     display: block;
     width: 5%;
     height: 10vh;
     float: left;
-}
+    opacity: 1;
+    animation-name: rotation; 
+    animation-duration: 130s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear;
+    opacity: .7;
+} 
+
+@keyframes rotation { 
+0% {transform:rotate(0deg);}
+100% {transform:rotate(360deg);}
+} 
 nav[role="navigation"] img {
     height: 8vh;
     width: 90%;
@@ -67,14 +84,15 @@ nav[role="navigation"] li a {
 }
 nav[role="navigation"] li a:hover {
     color: #151515;
-    background-color: rgba(245, 245, 245, .5);
+    background-color: rgba(245, 245, 245, .7);
     border-bottom: 1px solid rgba(189, 189, 189, .9);
     border-top: 1px solid rgba(189, 189, 189, .9);
 }
 .about-me-block {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 0;
     height: 100vh;
@@ -82,14 +100,17 @@ nav[role="navigation"] li a:hover {
     background-color: #f5f5f5;
 }
 .about-me-img {
-    width: 50%;
-    padding: 5em 2em;
+    width: 30%;
+    padding: 1em 1em;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    
 }
 .about-me-img img {
-    width: 50%;
+    width: 80%;
     height: 15%;
+    -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
 }
 img[alt="mePhoto"] {
     display: visible;
@@ -98,23 +119,24 @@ img[alt="mePhotoMobileVersion"] {
     display: none;
 }
 .about-me-text {
-    width: 50%;
+    width: 70%;
     padding: 6em 4em;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     color: #212121;
+}
+.about-me-text h1 {
+    letter-spacing: 0.1em;
+    text-shadow: 1px 1px 1px rgba(33, 33, 33, .9);
 }
 .about-me-text p {
     padding: 1em 0;
-    border: 2px solid #212121;
+    border: 2px solid #424242;
     border-right: none;
     border-left: none;
 }
-.forMobileOnly {
-    display: none;
-}
-
 .my-jobs {
     display: flex;
     flex-direction: column;
@@ -125,7 +147,7 @@ img[alt="mePhotoMobileVersion"] {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border-bottom: 2px solid #212121;
+    border-bottom: 2px solid #424242;
     padding-bottom: 0.2em;
 }
 .my-jobs-presentations {
@@ -198,11 +220,81 @@ img[alt="mePhotoMobileVersion"] {
     letter-spacing: 0.05em;
     font-size: 1.1em;
 }
+aside {
+    width: 100%;
+}
+.write-to-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #212121;
+}
+.write-to-me h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 2px solid #424242;
+    padding-bottom: 0.2em;
+}
+.send-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+fieldset {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding-left: 15%;
+}
+label {
+    margin: 0;
+    padding: 0;
+}
+input {
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+}
+textarea:focus, 
+input:focus {
+    box-shadow: 0 0 2px 2px #cc4800;
+    outline: none;
+    border-radius: 0;
+}
+textarea {
+    width: 80%;
+    outline: none;
+    resize: none;
+    overflow: auto;
+    border-radius: 0;
+    border-color: chocolate;
+}
+.normalButton {
+    width: 80%;
+    color: #424242;
+    background-color: #fff;
+    transition: .01s;
+    font-size: 1.3rem;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
 
-
-
-
-
+.normalButton:hover {
+    color: #212121;
+    box-shadow: 0 1px 0 rgba(0,0,0,.2);
+}
+.normalButton:active {
+    box-shadow: 0 -1px 0 rgba(0,0,0,.2);
+    border-bottom: 1px solid #bdbdbd;
+}
 
 
 
@@ -256,7 +348,7 @@ img[alt="mePhotoMobileVersion"] {
         text-decoration: none;
         color: #333333;
         font-size: 1em;
-        padding: 0 0.5em;
+        padding: 0 0.2em;
         line-height: 1;
         text-align: center;
     }
@@ -284,6 +376,8 @@ img[alt="mePhotoMobileVersion"] {
     .about-me-img img {
         width: 40%;
         height: 100%;
+        -webkit-clip-path: none;
+    clip-path: none;
     }
     img[alt="mePhoto"] {
         display: none;
@@ -307,11 +401,12 @@ img[alt="mePhotoMobileVersion"] {
         font-size: 2.2em;
     }
     .about-me-text p {
-        padding: 2em 0;
+        padding: 0.6em 0.2em;
         border: 2px solid #212121;
         border-right: none;
         border-left: none;
-        
+        text-indent: 1.2em;
+        word-break:keep-all;
     }
     .my-jobs {
         display: flex;
@@ -331,6 +426,8 @@ img[alt="mePhotoMobileVersion"] {
         flex-flow: row wrap;
         justify-content: space-between;
         margin-bottom: 2%;
+        width: 90%;
+        margin-left: 5%;
     }
     .presentation-block {
         display: flex;
@@ -347,15 +444,12 @@ img[alt="mePhotoMobileVersion"] {
         box-shadow: 0 1px 4px rgba(0, 0, 0, .7);
         border: 1px solid rgba(255, 255, 255, 0);
     }
-
-
     .presentation-block h1 {
         width: 90%;
         border: none;
         font-size: 2.4em;
         padding: 0;
     }
-    
     .presentation-block img,
     .presentation-block a,
     .presentation-block p {
@@ -369,23 +463,56 @@ img[alt="mePhotoMobileVersion"] {
     }
     .devices-img-desktop {
         width: 94.5%;
-        height: 42%;
+        height: 36.5%;
         padding-left: 5.4%;
         padding-top: 5%;
     }
     .devices-img-tablet {
         width: 44.8%;
-        height: 44.5%;
+        height: 38%;
         padding-left: 3.8%;
-        padding-top: 23.5%;
+        padding-top: 22.5%;
     }
     .devices-img-mobile {
-        width: 52.2%;
-        height: 33%;
+        width: 51%;
+        height: 30%;
         padding-left: 37.8%;
-        padding-top: 19.9%;
+        padding-top: 21%;
         position: relative;
-        top: -1.5%;
+        top: -1%;
+    }
+    fieldset {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        padding-left: 0;
+    }
+    input {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    input:focus {
+        outline: none;
+    }
+    textarea {
+        width: 100%;
+        outline: none;
+        resize: none;
+        overflow: auto;
+        border-radius: 0;
+    }
+    .normalButton {
+        width: 100%;
+        color: #424242;
+        background-color: #fff;
+        transition: .01s;
+        font-size: 1.3rem;
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
     }
 }
 /* Экраны среднего размера */

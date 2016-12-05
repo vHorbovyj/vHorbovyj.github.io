@@ -8,18 +8,19 @@
 <meta charset=utf-8>
 <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no" />
 <title>Volodymyr Horbovyj</title>
+<link href="vHorbovyj.png" rel="icon">
 <link href="css/normalize.css" rel="stylesheet" />
 <link href="css/skeleton.css" rel="stylesheet" />
 <link href="css/main.css" rel="stylesheet" />
 <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
 <script type="text/javascript" src="js/scroll.js"></script>
 </head>
-    <body>
+    <body id="top">
         <div class="wrapper">
             
             <header id="about-me-anchor">
                 <nav role="navigation">
-                    <a class="nav-mini-logo" href="#"><img src="img/7krHLj1N.png" alt="logo" /></a>
+                    <a class="nav-mini-logo" href="#top"><img src="img/vHorbovyj.svg" alt="logo" /></a>
                     <ul class="nav">
                         <li><a href="#about-me-anchor">Про мене</a></li>
                         <li><a href="#my-jobs-anchor">Мої роботи</a></li>
@@ -33,7 +34,7 @@
                         <img src="img/mePhoto2.jpg" alt="mePhotoMobileVersion" />
                     </section>
                     <section class="about-me-text">
-                        <h1>Volodymyr Horbovyj</h1>
+                        <h1>Володимир Горбовий</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at diam eget elit finibus scelerisque. Aliquam erat volutpat. Nam mauris odio, imperdiet a magna ut, dapibus ultricies risus. Proin in leo eu neque vehicula fermentum sed vitae ante. Vestibulum varius velit a ipsum egestas venenatis. Praesent mollis orci vitae consectetur lobortis. In ultrices risus sed faucibus pellentesque.</p>
                     </section>
                 </div>
@@ -41,7 +42,7 @@
             
             <main id="my-jobs-anchor">
                 <div class="my-jobs">
-                    <h1>My jobs</h1>
+                    <h1>Мої роботи</h1>
                     <section class="my-jobs-presentations">
                         <section class="presentation-block">
                             <h1>Nimko Nails</h1>
@@ -73,22 +74,35 @@
                             <a href="#" alt="ads">vhorbovyj/appdesign.com</a>
                             <p>Vestibulum varius velit a ipsum egestas venenatis. Praesent mollis orci vitae consectetur lobortis.</p>
                         </section>
-                        <section class="presentation-block">
-                            <h1>Site name</h1>
-                            <img src="img/7krHLj1N.png" alt="tototo" />
-                            <a href="#" alt="ads">sitename.com</a>
-                            <p>Vestibulum varius velit a ipsum egestas venenatis. Praesent mollis orci vitae consectetur lobortis.</p>
-                        </section>
                     </section>
                 </div>
             </main>
             
             <aside id="write-to-me-anchor">
-            
+                <div class="write-to-me">
+                    <h1>Напишіть мені</h1>
+                    <form name="zamovlennja" method="post" action="" class="send-form">
+                        <fieldset>
+                        <label for="name">Ім'я:</label>
+                        <input type="text" name="name" id="name" placeholder="Ваше ім'я" size="35" 
+                        pattern="[A-Za-zА-Яа-яЁёЇїІі]{3,}" 
+                        title="Мінімум 3 букви. Ім'я не повинне містите цифри" 
+                        autofocus required>
+                        <br>
+                        <label for="sendComments" >Текст:</label>
+                        <textarea name="sendComments" id="sendComments" cols="37" rows="10" 
+                        placeholder="Текст повідомлення"></textarea>
+                        <br>
+                        <button type="submit" value="Submit" class="normalButton"><span>Надіслати</span></button>
+                        <br>
+                        <button type="reset" value="Reset" class="normalButton">Очистити</button>
+                        </fieldset>
+                    </form>
+                </div>
             </aside>
             
             <footer id="contacts-anchor">
-
+                <h1>contact info</h1>
             </footer>
         </div>
     </body>
