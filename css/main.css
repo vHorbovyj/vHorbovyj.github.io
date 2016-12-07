@@ -302,7 +302,7 @@ textarea {
 }
 @media only screen and (min-device-width : 320px)  and (max-device-width : 480px) {
     .wrapper {
-
+        width: 320px;
         margin: 0 auto;
     }
     nav[role="navigation"] {
