@@ -26,16 +26,16 @@ video {
 #wrapper {
     margin-right: auto;
     margin-left: auto;
-    width: 100%;
     min-width: 100%;
     height: 100%;
-    position: relative;
+
 }
 /** Загальні стилі **/
 
 /** Початок лівого блоку(меню) **/
 .leftBlock {
     position: fixed;
+    width: 25vw;
     height: 100%;
     top: 0;
     left: 0;
@@ -59,7 +59,7 @@ video {
     font-family: Merienda,cursive;
     font-weight: 700;
 }
-.logoTop span a{
+.logoTop span a {
     text-decoration: none;
     color: #69b8e7;
     font-size: 7rem;
@@ -212,7 +212,8 @@ video {
 .rightBlock {
     position: relative;
     top: 0;
-    left: 25%;
+    left: 25vw;
+    width: 75vw;
     margin: 1% 0;
 }
 
@@ -512,9 +513,11 @@ textarea {
     box-shadow: 0 -1px 0 rgba(0,0,0,.2);
     border-bottom: 1px solid #bdbdbd;
 }
+
 .presentationBlock {
-    width: 80%;
+    width: 25vw;
     margin: 5% 0 0 10%;
+    float: left;
 }
 .presentationBlock header {
     float: left;
@@ -583,67 +586,441 @@ img[alt="commAuthor"] {
     color: #151515;
 }
 
-@media screen and (max-width:768px) {
-    #wrapper,footer,header,nav {
-        width: 768px;
-        margin: 0;
+@media only screen and (min-device-width : 320px)  and (max-device-width : 480px) {
+    .leftBlock {
+        position: absolute;
+        height: 100%;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        background-color: #212121;
+        border-right: none;
+        box-shadow: none;
     }
-    #logo{
-        text-align: center;
+
+    /** Логотип(початок) **/
+    .logo {
+        height: 20vh;
+        margin: 0 auto;
     }
-    nav{
-        text-align: center;
-        background-image: none;
-        border-top-color: #bfbfbf;
-        border-top-style: double;
-        border-top-width: 4px;
-        padding-top: 20px;
+    .logoTop {
+        height: 15vh;
     }
-    nav ul li a {
-        background-color: #dedede;
-        line-height: 60px;
-        font-size: 40px;
+    .logoBot {
+        height: 5vh;
+        margin-top: 2vh;
     }
-    #content,
-    aside{
-        margin-top: 20px;
-        padding-right: 10px;
-        padding-left: 10px;
-        width: 728px;
+    /** Логотип(кінець) **/
+
+    /** Навігація(початок) **/
+    .mainNav {
+        margin-top: 8vh;
     }
-    .oscarMain{
-        margin-right: 30px;
-        margin-top: 0;
-        width: 150px;
-        height: 394px;
+    .mainNav ul li{
+        display: block;
     }
-    aside{
-        border-right:none;
-        border-top: 2px solid #e8e8e8;
-        padding-top: 20px;
-        margin-bottom: 20px;
+    .mainNav ul li a{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        padding: .3rem;
+        line-height: 1.3;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-size: 2.8rem;
+        color: #424242;
+        border: 3px solid #212121;
     }
-    .sideBlock{
-        width: 45%;
+    .mainNav ul li a:hover{
+        color: #fafafa;
+        border: 3px solid #eeeeee;
+    }
+    .mainNav ul li a:active{
+        border-left: none;
+        border-right: none;
+        width: 100%;
+        transition: .05s;
+    }
+    /** Навігація(кінець) **/
+
+    /** Контакти(початок) **/
+    .contactsNav {
+        bottom: 12vh;
+    }
+    .contactsNav ul {
+        padding: 1%;
+    }
+    .contactsNav ul li a {
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
+    /** Контакти(кінець) **/
+
+    /** Підвал(початок) **/
+    .leftBlock footer {
+        height: 12vh;
+    }
+    .leftBlock footer h1 {
+        padding-top: 0.5vh;
+    }
+    .leftBlock footer img {
+        height: 6vh;
+        left: 45%;
+    } 
+    /** Навігація новинами(початок) **/
+    .newsNav {
+        top: 95vh;
+        left: 0;
+    }
+    .newsNav ul {
+        list-style: none;
+    }
+    .newsNav ul span {
+        display: none;
+    } 
+    .newsNav ul li a.hide {
+        display: none;
+    }
+    .backToTop {
+        width: 100%;
+        border: none;
+    }
+    /** Навігація новинами(кінець) **/
+
+    /** Якори(початок) **/
+    .anchors {
+        width: 100%;
+        height: 10vh;
+        margin: 1% 0;
+    }
+    .anchors h1{
+        font-size: 3.4rem;
+        line-height: 1.3;
+    }
+    /** Якори(кінець) **/
+    .rightBlock {
+        position: absolute;
+        top: 100vh;
+        left: 0;
+        margin: 1% 0;
+        width: 100vw;
+    }
+    /** Блок новин(початок) **/
+    .postBlock { 
+        width: 95%;
+        margin: 1% 2.5%;
+    }
+
+    .topicPhoto {
+        width: 100%;
+        height: 100%;
         float: left;
     }
-    .overHyped{
-        margin-top: 0;
-        margin-left: 50px;
+    .topicPhoto img[alt=newsPhoto] {
+        width: 100%;
+        height: 100%;
     }
+    .post {
+        margin: 0.1% 0;
+        color: #fafafa;
+    }
+    .post p {
+        font-size: 1.4rem;
+        padding: 1% 2%;
+        text-indent: 1rem;
+        color: #ffffff;
+        letter-spacing: 0.01rem;
+    }
+    .post p:first-line {
+        color: #6db8e6;
+        font-size: 1.6rem;
+    }
+    /** Блок новин(кінець) **/
+    .presentationBlock {
+        width: 90vw;
+        margin: 5vh 0 0 5vw;
+        float: left;
+    }
+    .sendForm {
+        margin: 2% auto;
+        padding: 0;
+        width: 90vw;
+        font-size: 1.6rem;
+        background-color: #e0e0e0;
+        border-bottom: 10px solid #333333;
+        box-shadow: 0 1px 5px rgba(0,0,0,.7);
+    }
+    /** Сторінка "Про мене"(початок) **/
+    figure.aboutMePointTop {
+        width: 100%;
+        margin: 5% auto;
+    }
+    figure.aboutMePoint {
+        width: 70%;
+        margin: 0 auto;
+    }
+    figure.aboutMePointBot {
+        width: 2%;
+        margin: 0 auto;
+    }
+    img[alt=aboutMePhoto] {
+        width: 40%;
+        margin-left: 30%;
+        border: 4px solid #eeeeee;
+        border-radius: 50%;
+        box-shadow: 0 1px 5px rgba(0,0,0,.4);
+        margin-bottom: -1%;
+        background-color: rgba(117,117,117,.7);
+    }
+    .aboutMe p {
+        margin: 0;
+        color: #757575;
+        font-size: 1.78rem;
+        padding: 0 2% 3% 0;
+        transition: .8s;
+    }
+    .aboutMe p:hover {
+        color: #f5f5f5;
+        border-color: #eeeeee;
+        transition: .5s;
+    }
+    p.rightBorder {
+        float: left;
+        text-align: right;
+        margin-left: 0;
+        padding: 3%;
+        border-right: 2px solid #6db8e6;
+    }
+    p.leftBorder {
+        text-align: left;
+        float: right;
+        margin-right: 0;
+        padding-left: 3%;
+        border-left: 2px solid #6db8e6;
+    }
+    span.right {
+        display: block;
+        width: 100%;
+        text-align: right;
+        color: #6cb8e7;
+        text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+        font-size: 3rem;
+    }
+    span.left {
+        display: block;
+        width: 100%;
+        text-align: left;
+        color: #6cb8e7;
+        text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+        font-size: 3rem;
+    }
+    /** Сторінка "Про мене"(кінець) **/
+    
 }
-@media screen and (min-width:1001px) and (max-width:1080px) 
-    {nav ul li a {
+
+@media all and (min-width: 600px) {
+    
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  
+
+    /** Логотип(початок) **/
+    .logo {
+        height: 20vh;
+        margin: 0 auto;
+    }
+    .logoTop {
+        height: 10vh;
+    }
+    .logoTop span a {
+        text-decoration: none;
+        color: #69b8e7;
+        font-size: 4.8rem;
+        line-height: 1.5;
+    }
+    .logoBot {
+        height: 5vh;
+        margin-top: 2vh;
+        font-size: 3.8rem;
+    }
+    /** Логотип(кінець) **/
+
+    /** Навігація(початок) **/
+    .mainNav {
+        margin-top: 6vh;
+    }
+    .mainNav ul li {
+        display: block;
+    }
+    .mainNav ul li a { 
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        padding: .3rem;
+        line-height: 1;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        font-size: 2rem;
+        color: #424242;
+        border: 3px solid #212121;
+    }
+    .mainNav ul li a:hover{
+        color: #fafafa;
+        border: 3px solid #eeeeee;
+    }
+    .mainNav ul li a:active{
+        border-left: none;
+        border-right: none;
+        width: 100%;
+        transition: .05s;
+    }
+    /** Навігація(кінець) **/
+
+    /** Контакти(початок) **/
+    .contactsNav {
+        bottom: 12vh;
+    }
+    .contactsNav ul {
+        padding: 1%;
+    }
+    .contactsNav ul li a {
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
+    /** Контакти(кінець) **/
+
+    /** Підвал(початок) **/
+    .leftBlock footer {
+        height: 12vh;
+    }
+    .leftBlock footer h1 {
         font-size: 1.2em;
-        }
-}
-@media screen and (min-width:805px) and (max-width:1000px){
-    nav ul li a {
-        font-size: 1.15em;
+        padding-top: 0.5vh;
+    }
+    .leftBlock footer img {
+        height: 4vh;
+        left: 45%;
+    } 
+    /** Навігація новинами(початок) **/
+    .newsNav {
+        position: fixed;
+        top: 5vh;
+        left: 21.7vw;
+        z-index: 1;
+        background-color: rgba(33,33,33,.7);
+    }
+    .newsNav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 1.2rem;
+        border: 1px solid #151515;
+        border-left: none;
+    }
+    .newsNav ul span {
+        display: inline-block;
+        padding: 0 1rem;
+        color: #212121;
+        font-weight: 700;
+        font-size: 1.4rem;
+        width: 100%;
+        text-align: center;
+        background-color: #eeeeee;
+        border-bottom: 1px solid #333333;
+        text-transform: uppercase;
+    } 
+    .newsNav ul li {
+        margin: 0;
+        display: block;
+    }
+    .newsNav ul li a {
+        text-align: center;
+        margin: 0 auto;
+        text-decoration: none;
+        display: inline-block;
+        width: 100%;
+        padding: 0 1rem;
+        line-height: 1.7;
+        color: #eeeeee;
+        opacity: .2;
+    }
+    .newsNav ul li a:hover {
+        color: #fafafa;
+        font-size: 1.4rem;
+        background-color: #151515;
+        opacity: 1;
+    }
+
+    /** Якори(початок) **/
+    .anchors {
+        width: 100%;
+        height: 10vh;
+        margin: 1% 0;
+    }
+    .anchors h1{
+        font-size: 3.4rem;
+        line-height: 1.3;
+    }
+    /** Якори(кінець) **/
+    .rightBlock {
+        position: relative;
+        top: 0;
+        left: 25vw;
+        width: 75vw;
+        margin: 1% 0;
+    }
+    /** Блок новин(початок) **/
+    .postBlock { 
+        width: 95%;
+        margin: 1% 2.5%;
+    }
+
+    .topicPhoto {
+        width: 100%;
+        height: 100%;
+        float: left;
+    }
+    .topicPhoto img[alt=newsPhoto] {
+        width: 100%;
+        height: 100%;
+    }
+    .post {
+        margin: 0.1% 0;
+        color: #fafafa;
+    }
+    .post p {
+        font-size: 1.4rem;
+        padding: 1% 2%;
+        text-indent: 1rem;
+        color: #ffffff;
+        letter-spacing: 0.01rem;
+    }
+    .post p:first-line {
+        color: #6db8e6;
+        font-size: 1.6rem;
+    }
+    /** Блок новин(кінець) **/
+    .presentationBlock {
+        width: 30vw;
+        margin: 5% 0 0 5%;
+        float: left;
+    }
+    .sendForm {
+        margin: 2% auto;
+        padding: 1% 0;
+        width: 70vw;
+        font-size: 1.6rem;
+        background-color: #e0e0e0;
+        border-bottom: 10px solid #333333;
+        box-shadow: 0 1px 5px rgba(0,0,0,.7);
     }
 }
-@media screen and (min-width:769px) and (max-width:804px) {
-        nav ul li a{
-            font-size: 1.1em;
-        }
+
+@media all and (min-width: 800px) {
+  
 }
+
+
