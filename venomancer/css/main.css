@@ -13,7 +13,10 @@ body {
     color: #212121;
     background-color: rgba(173, 198, 9, .2);
 }
-embed,img,object,video {
+embed, 
+img, 
+object, 
+video {
     max-width: 100%;
 }
 video {
@@ -751,35 +754,59 @@ img[alt="VenomancerGifAnimation"] {
     }
     /** /ПІДВАЛ **/
 }
-/* Экраны среднего размера */
-@media all and (min-width: 600px) {
-  /* Оба сайдбара располагаются в одной строке */
-  .aside { flex: 1 auto; }
-    .logo img {
-        display: flex;
-        width: 35%;
-    }
-}
+
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    
-}
-/* Большие экраны */
-@media all and (min-width: 800px) {
-  /* Мы меняем местами элементы .aside-1 и .main, а также сообщаем
-   * элементу .main забирать в два раза больше места, чем сайдбары.
-   */
-  .main { flex: 2 0px; }
-
-  .aside-1 { order: 1; }
-  .main    { order: 2; }
-  .aside-2 { order: 3; }
-  .footer  { order: 4; }
-    .logo img {
-        display: flex;
-        width: 35%;
+    .wrapperMain {
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        width: 768px;
+        margin: 0 auto;
+    }
+    .wrapperContent {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 580px;
+    }
+    .bigLettersHero {
+        position: fixed;
+        top: 11vh;
+        left: -45vw;
+        width: 100%;
+        padding-left: 6%;
+        color: rgba(173, 198, 9, .5);
+        font-size: 3.2em;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        border-bottom: 2px solid rgba(173, 198, 9, .5);
+        -ms-transform: rotate(270deg);
+        -moz-transform: rotate(270deg);
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        background-image: url(imgsBack/venoHead.jpg);
+        background-position: center;
+    }
+    nav {
+        position: fixed;
+        top: 32.5%;
+        right: 1vw;
+        height: 35%;
+    }
+    .navigation li a {
+        flex-direction: row;
+        justify-content: flex-end;
+        color: rgba(173, 198, 9, .5);
+        font-size: 1.15em;
+        text-decoration: none;
     }
 }
-
 
 
 
