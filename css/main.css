@@ -75,6 +75,7 @@ video {
         border-left: 50vw solid transparent;
         border-right: 50vw solid transparent;
         border-top: 15vh solid rgb(21,21,21);
+        margin-top: -0.1vh;
     }
     .triangle-down-1 {
         width: 0; 
@@ -107,6 +108,7 @@ video {
         border-left: 50vw solid transparent;
         border-right: 50vw solid transparent;
         border-top: 15vh solid rgb(21,21,21);
+        margin-top: -0.1vh;
     }
     .triangle-bottomL-2 {
         width: 0;
