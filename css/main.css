@@ -405,14 +405,16 @@ video {
         width: 100%;
     }
     .intro {
+        width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-flow: column;
         align-items: center;
         justify-content: center;
         background-color: rgb(21,21,21);
     }
     header img {
         display: flex;
+        align-self: center;
         margin-top: 4vh;
         height: 50vh;
         border: 3px solid rgb(135,176,74);
@@ -431,6 +433,12 @@ video {
         font-weight: 400;
         text-transform: uppercase;
         text-shadow: 0 2px 2px rgba(0,0,0,1);
+    }
+    .name {
+        align-self: center;
+    }
+    .sername {
+        align-self: center;
     }
     /*** /ШАПКА САЙТУ ***/
     
@@ -767,10 +775,1137 @@ video {
 }
 
 /* От портретного планшета до ландшафтного экрана и настольных дисплеев */
-@media (min-width: 768px) and (max-width: 979px) { ... }
+@media (min-width: 768px) and (max-width: 979px) {
+     body {
+        font-size: 16px;
+    }
+    /*** ШАПКА САЙТУ ***/
+    header {
+        width: 100%;
+    }
+    .intro {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgb(21,21,21);
+    }
+    header img {
+        order: 2;
+        margin-top: 4vh;
+        height: 40vh;
+        border: 3px solid rgb(135,176,74);
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0,0,0,1);
+        margin-right: 2.5rem;
+    }
+    header h1 {
+        display: flex;
+        margin: 0;
+        margin-top: 2%;
+        padding: 0;
+        padding-top: 2%;
+        color: rgb(245,245,245);
+        text-align: center;
+        font-size: 2.4em;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-shadow: 0 2px 2px rgba(0,0,0,1);
+    }
+    .name {
+        order: 1;
+    }
+    .sername {
+        order: 3;
+    }
+    /*** /ШАПКА САЙТУ ***/
+    
+    /*** ОБ'ЄКТИ СТРІЛКИ ***/
+    .separator {
+        width: 100%;
+    }
+    
+    .triangle-down-0 {
+        width: 0; 
+        height: 0; 
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 15vh solid rgb(21,21,21);
+        margin-top: -0.2vh;
+    }
+    .triangle-down-1 {
+        width: 0; 
+        height: 0; 
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 15vh solid rgb(15,15,15);
+        margin-top: -5vh;
+    }
+    .triangle-bottomL-1 {
+        width: 0;
+        height: 0;
+        border-bottom: 15vh solid rgb(21,21,21);
+        border-right: 50vw solid transparent;
+        float: left;
+        margin-top: -9.9vh;
+    }
+    .triangle-bottomR-1 {
+        width: 0;
+        height: 0;
+        border-bottom: 15vh solid rgb(21,21,21);
+        border-left: 50vw solid transparent;
+        float: right;
+        margin-top: -9.9vh;
+    }
+    
+    .triangle-down-2 {
+        width: 0; 
+        height: 0; 
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 15vh solid rgb(21,21,21);
+        margin-top: -0.1vh;
+    }
+    .triangle-bottomL-2 {
+        width: 0;
+        height: 0;
+        border-bottom: 15vh solid rgb(15,15,15);
+        border-right: 50vw solid transparent;
+        float: left;
+        margin-top: -10.1vh;
+    }
+    .triangle-bottomR-2 {
+        width: 0;
+        height: 0;
+        border-bottom: 15vh solid rgb(15,15,15);
+        border-left: 50vw solid transparent;
+        float: right;
+        margin-top: -10.1vh;
+    }
+    /*** /ОБ'ЄКТИ СТРІЛКИ ***/
+    
+    /*** ПРО МЕНЕ ***/
+    main {
+        background-color: rgb(15,15,15);
+    }
+    .about {
+        padding: 5vh 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .block-title h1 {
+        width: 95%;
+        display: flex;
+        align-self: flex-start;
+        color: rgb(135,176,74);
+        margin: 0;
+        margin-left: 1rem;
+        padding: 0 0.2rem;
+        font-size: 2em;
+        text-shadow: 0 1px 1px rgba(0,0,0,1);
+        border-bottom: 2px solid rgb(135,176,74);
+    }
+    .about-text {
+        width: 90%;
+    }
+    p {
+        font-size: 1.2em;
+        width: 100%;
+        margin: 0.1rem 0;
+        padding: 0.2rem 0;
+        text-indent: 0.5rem;
+    }
+    /*** /ПРО МЕНЕ ***/
+    
+    /*** ВМІННЯ ***/
+    .skills {
+        padding: 5vh 0;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 100%;
+        background-color: rgb(21,21,21);
+    }
+    .skills-block {
+        width: 90%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .skills header {
+        width: 100%;
+    }
+    .skills~header h1 {
+        width: 100%;
+    }
+    .skill-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+    }
+    .skill-block h2 {
+        font-size: 1.4em;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+    .progress-bar {
+        width: 100%;
+        height: 3em;
+        font-size: 1.4em;
+        line-height: 2.4;
+        border: 2px solid rgb(135,176,74);
+    }
+    .level-html {
+        width: 0;
+        height: 85%;
+        margin: 0.2em;
+        text-align: center;
+        background-color: rgb(135,176,74);
+        -webkit-animation-name: level-html-animate;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite; 
+        -webkit-animation-timing-function: linear;
+        animation-name: level-html-animate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite; 
+        animation-timing-function: linear;
+    }
+    .level-css {
+        width: 0;
+        height: 85%;
+        margin: 0.2em;
+        text-align: center;
+        background-color: rgb(135,176,74);
+        -webkit-animation-name: level-css-animate;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite; 
+        -webkit-animation-timing-function: linear;
+        animation-name: level-css-animate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite; 
+        animation-timing-function: linear;
+    }
+    .level-js {
+        width: 0;
+        height: 85%;
+        margin: 0.2em;
+        text-align: center;
+        background-color: rgb(135,176,74);
+        -webkit-animation-name: level-js-animate;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite; 
+        -webkit-animation-timing-function: linear;
+        animation-name: level-js-animate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite; 
+        animation-timing-function: linear;
+    }
+    /*** /ВМІННЯ ***/
+    
+    .my-jobs {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+    .project-block {
+        width: 30%;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid transparent;
+    }
+    .project-block:hover {
+        border: 2px solid rgb(135,176,74);
+    }
+    .project-block h2 {
+        font-size: 1.6em;
+        font-weight: 400;
+    }
+    .project-block a {
+        width: 60%;
+        display: block;
+    }
+    .project-block a.text-link {
+        width: 90%;
+        padding: 0.1em;
+        padding-left: 0.9vw;
+        margin: 0.5em;     
+        font-size: 1.2em;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1em;
+        color: rgba(245,245,245,.3);
+        border-left: 2px solid rgb(135,176,74);
+        border-right: 2px solid rgb(135,176,74);
+    }
+    .project-block a:hover {
+        color: rgb(135,176,74);
+        border-left: 2px solid rgba(245,245,245,.3);
+        border-right: 2px solid rgba(245,245,245,.3);
+    }
+    .writeToMe-block {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: rgb(21,21,21);
+        padding-top: 5vh;
+    }
+    .send-form {
+        width: 90%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+    label {
+        align-self: flex-start;
+        margin-top: 0.7rem;
+        font-size: 1.2em;
+    }
+    input,
+    textarea {
+        width: 100%;
+        margin-top: 2%;
+        outline: none;
+        resize: none;
+        overflow: auto;
+        border-radius: 0;
+        background-color: rgba(245,245,245,1);
+        border: 2px solid transparent;
+    }
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border-radius: 0;
+        border: 2px solid rgb(135,176,74);
+        box-shadow: 0 2px 5px rgba(0,0,0,1);
+    }
 
+    button {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 1rem;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        color: rgba(245,245,245,.3);
+        background-color: transparent;
+        color: rgba(245,245,245,.3);
+        border-color: transparent;
+        border-left: 2px solid rgb(135,176,74);
+        border-right: 2px solid rgb(135,176,74);
+    }
+    button:hover {
+        color: rgba(245,245,245,1);
+        background-color: rgb(135,176,74);
+    }
+    button[type="reset"] {
+        border-left: 2px solid rgb(170,75,75);
+        border-right: 2px solid rgb(170,75,75);
+    }
+    button[type="reset"]:hover {
+        background-color: rgb(170,75,75);
+    }
+    
+    .contacts-block {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+    .contacts-list {
+        width: 90%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .contacts-list img {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+    }
+    footer {
+        width: 100%;
+        background-color: rgb(21,21,21);
+        margin-top: 4.9vh;
+        padding: 2rem;
+    }
+    footer h6 {
+        font-size: 0.9em;
+    }
+    footer h6 b {
+        font-size: 1em;
+        color: rgb(135,176,74);
+    }
+}
+@media (min-width: 980px) and (max-width: 1199px) {
+    body {
+        font-size: 16px;
+    }
+    /*** ШАПКА САЙТУ ***/
+    header {
+        width: 100%;
+    }
+    .intro {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgb(21,21,21);
+    }
+    header img {
+        order: 2;
+        margin-top: 4vh;
+        height: 40vh;
+        border: 3px solid rgb(135,176,74);
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0,0,0,1);
+        margin-right: 2.5rem;
+    }
+    header h1 {
+        display: flex;
+        margin: 0;
+        margin-top: 2%;
+        padding: 0;
+        padding-top: 2%;
+        color: rgb(245,245,245);
+        text-align: center;
+        font-size: 2.4em;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-shadow: 0 2px 2px rgba(0,0,0,1);
+    }
+    .name {
+        order: 1;
+    }
+    .sername {
+        order: 3;
+    }
+    /*** /ШАПКА САЙТУ ***/
+    
+    /*** ОБ'ЄКТИ СТРІЛКИ ***/
+    .separator {
+        width: 100%;
+    }
+    
+    .triangle-down-0 {
+        width: 0; 
+        height: 0; 
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 15vh solid rgb(21,21,21);
+        margin-top: -0.2vh;
+    }
+    .triangle-down-1 {
+        width: 0; 
+        height: 0; 
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 15vh solid rgb(15,15,15);
+        margin-top: -5vh;
+    }
+    .triangle-bottomL-1 {
+        width: 0;
+        height: 0;
+        border-bottom: 15vh solid rgb(21,21,21);
+        border-right: 50vw solid transparent;
+        float: left;
+        margin-top: -9.9vh;
+    }
+    .triangle-bottomR-1 {
+        width: 0;
+        height: 0;
+        border-bottom: 15vh solid rgb(21,21,21);
+        border-left: 50vw solid transparent;
+        float: right;
+        margin-top: -9.9vh;
+    }
+    
+    .triangle-down-2 {
+        width: 0; 
+        height: 0; 
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 15vh solid rgb(21,21,21);
+        margin-top: -0.1vh;
+    }
+    .triangle-bottomL-2 {
+        width: 0;
+        height: 0;
+        border-bottom: 15vh solid rgb(15,15,15);
+        border-right: 50vw solid transparent;
+        float: left;
+        margin-top: -10.1vh;
+    }
+    .triangle-bottomR-2 {
+        width: 0;
+        height: 0;
+        border-bottom: 15vh solid rgb(15,15,15);
+        border-left: 50vw solid transparent;
+        float: right;
+        margin-top: -10.1vh;
+    }
+    /*** /ОБ'ЄКТИ СТРІЛКИ ***/
+    
+    /*** ПРО МЕНЕ ***/
+    main {
+        background-color: rgb(15,15,15);
+    }
+    .about {
+        padding: 5vh 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .block-title h1 {
+        width: 95%;
+        display: flex;
+        align-self: flex-start;
+        color: rgb(135,176,74);
+        margin: 0;
+        margin-left: 1rem;
+        padding: 0 0.2rem;
+        font-size: 2em;
+        text-shadow: 0 1px 1px rgba(0,0,0,1);
+        border-bottom: 2px solid rgb(135,176,74);
+    }
+    .about-text {
+        width: 90%;
+    }
+    p {
+        font-size: 1.2em;
+        width: 100%;
+        margin: 0.1rem 0;
+        padding: 0.2rem 0;
+        text-indent: 0.5rem;
+    }
+    /*** /ПРО МЕНЕ ***/
+    
+    /*** ВМІННЯ ***/
+    .skills {
+        padding: 5vh 0;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 100%;
+        background-color: rgb(21,21,21);
+    }
+    .skills-block {
+        width: 90%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .skills header {
+        width: 100%;
+    }
+    .skills~header h1 {
+        width: 100%;
+    }
+    .skill-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+    }
+    .skill-block h2 {
+        font-size: 1.4em;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+    .progress-bar {
+        width: 100%;
+        height: 3em;
+        font-size: 1.4em;
+        line-height: 2.4;
+        border: 2px solid rgb(135,176,74);
+    }
+    .level-html {
+        width: 0;
+        height: 85%;
+        margin: 0.2em;
+        text-align: center;
+        background-color: rgb(135,176,74);
+        -webkit-animation-name: level-html-animate;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite; 
+        -webkit-animation-timing-function: linear;
+        animation-name: level-html-animate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite; 
+        animation-timing-function: linear;
+    }
+    .level-css {
+        width: 0;
+        height: 85%;
+        margin: 0.2em;
+        text-align: center;
+        background-color: rgb(135,176,74);
+        -webkit-animation-name: level-css-animate;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite; 
+        -webkit-animation-timing-function: linear;
+        animation-name: level-css-animate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite; 
+        animation-timing-function: linear;
+    }
+    .level-js {
+        width: 0;
+        height: 85%;
+        margin: 0.2em;
+        text-align: center;
+        background-color: rgb(135,176,74);
+        -webkit-animation-name: level-js-animate;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite; 
+        -webkit-animation-timing-function: linear;
+        animation-name: level-js-animate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite; 
+        animation-timing-function: linear;
+    }
+    /*** /ВМІННЯ ***/
+    
+    .my-jobs {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+    .project-block {
+        width: 30%;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid transparent;
+    }
+    .project-block:hover {
+        border: 2px solid rgb(135,176,74);
+    }
+    .project-block h2 {
+        font-size: 1.6em;
+        font-weight: 400;
+    }
+    .project-block a {
+        width: 60%;
+        display: block;
+    }
+    .project-block a.text-link {
+        width: 90%;
+        padding: 0.1em;
+        padding-left: 0.9vw;
+        margin: 0.5em;     
+        font-size: 1.2em;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1em;
+        color: rgba(245,245,245,.3);
+        border-left: 2px solid rgb(135,176,74);
+        border-right: 2px solid rgb(135,176,74);
+    }
+    .project-block a:hover {
+        color: rgb(135,176,74);
+        border-left: 2px solid rgba(245,245,245,.3);
+        border-right: 2px solid rgba(245,245,245,.3);
+    }
+    .writeToMe-block {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: rgb(21,21,21);
+        padding-top: 5vh;
+    }
+    .send-form {
+        width: 90%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+    label {
+        align-self: flex-start;
+        margin-top: 0.7rem;
+        font-size: 1.2em;
+    }
+    input,
+    textarea {
+        width: 100%;
+        margin-top: 2%;
+        outline: none;
+        resize: none;
+        overflow: auto;
+        border-radius: 0;
+        background-color: rgba(245,245,245,1);
+        border: 2px solid transparent;
+    }
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border-radius: 0;
+        border: 2px solid rgb(135,176,74);
+        box-shadow: 0 2px 5px rgba(0,0,0,1);
+    }
+
+    button {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 1rem;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        color: rgba(245,245,245,.3);
+        background-color: transparent;
+        color: rgba(245,245,245,.3);
+        border-color: transparent;
+        border-left: 2px solid rgb(135,176,74);
+        border-right: 2px solid rgb(135,176,74);
+    }
+    button:hover {
+        color: rgba(245,245,245,1);
+        background-color: rgb(135,176,74);
+    }
+    button[type="reset"] {
+        border-left: 2px solid rgb(170,75,75);
+        border-right: 2px solid rgb(170,75,75);
+    }
+    button[type="reset"]:hover {
+        background-color: rgb(170,75,75);
+    }
+    
+    .contacts-block {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+    .contacts-list {
+        width: 90%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .contacts-list img {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+    }
+    footer {
+        width: 100%;
+        background-color: rgb(21,21,21);
+        margin-top: 4.9vh;
+        padding: 2rem;
+    }
+    footer h6 {
+        font-size: 0.9em;
+    }
+    footer h6 b {
+        font-size: 1em;
+        color: rgb(135,176,74);
+    }
+}
 /* Большой дисплей */
-@media (min-width: 1200px) { ... }
+@media (min-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+    /*** ШАПКА САЙТУ ***/
+    header {
+        width: 100%;
+    }
+    .intro {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgb(21,21,21);
+    }
+    header img {
+        order: 2;
+        margin-top: 4vh;
+        height: 40vh;
+        border: 3px solid rgb(135,176,74);
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0,0,0,1);
+        margin-right: 2.5rem;
+    }
+    header h1 {
+        display: flex;
+        margin: 0;
+        margin-top: 2%;
+        padding: 0;
+        padding-top: 2%;
+        color: rgb(245,245,245);
+        text-align: center;
+        font-size: 2.8em;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-shadow: 0 2px 2px rgba(0,0,0,1);
+    }
+    .name {
+        order: 1;
+    }
+    .sername {
+        order: 3;
+    }
+    /*** /ШАПКА САЙТУ ***/
+    
+    /*** ОБ'ЄКТИ СТРІЛКИ ***/
+    .separator {
+        width: 100%;
+    }
+    
+    .triangle-down-0 {
+        width: 0; 
+        height: 0; 
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 15vh solid rgb(21,21,21);
+        margin-top: -0.2vh;
+    }
+    .triangle-down-1 {
+        width: 0; 
+        height: 0; 
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 15vh solid rgb(15,15,15);
+        margin-top: -5vh;
+    }
+    .triangle-bottomL-1 {
+        width: 0;
+        height: 0;
+        border-bottom: 15vh solid rgb(21,21,21);
+        border-right: 50vw solid transparent;
+        float: left;
+        margin-top: -9.9vh;
+    }
+    .triangle-bottomR-1 {
+        width: 0;
+        height: 0;
+        border-bottom: 15vh solid rgb(21,21,21);
+        border-left: 50vw solid transparent;
+        float: right;
+        margin-top: -9.9vh;
+    }
+    
+    .triangle-down-2 {
+        width: 0; 
+        height: 0; 
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid transparent;
+        border-top: 15vh solid rgb(21,21,21);
+        margin-top: -0.1vh;
+    }
+    .triangle-bottomL-2 {
+        width: 0;
+        height: 0;
+        border-bottom: 15vh solid rgb(15,15,15);
+        border-right: 50vw solid transparent;
+        float: left;
+        margin-top: -10.1vh;
+    }
+    .triangle-bottomR-2 {
+        width: 0;
+        height: 0;
+        border-bottom: 15vh solid rgb(15,15,15);
+        border-left: 50vw solid transparent;
+        float: right;
+        margin-top: -10.1vh;
+    }
+    /*** /ОБ'ЄКТИ СТРІЛКИ ***/
+    
+    /*** ПРО МЕНЕ ***/
+    main {
+        background-color: rgb(15,15,15);
+    }
+    .about {
+        padding: 5vh 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .block-title h1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: rgb(135,176,74);
+        margin: 0;
+        padding: 1rem 0.2rem;
+        font-size: 2.2em;
+        text-shadow: 0 1px 1px rgba(0,0,0,1);
+        border-bottom: 2px solid rgb(135,176,74);
+    }
+    .about-text {
+        width: 90%;
+    }
+    p {
+        font-size: 1.2em;
+        width: 100%;
+        margin: 1rem 0;
+        padding: 0.2rem 0;
+        text-indent: 0.5rem;
+    }
+    /*** /ПРО МЕНЕ ***/
+    
+    /*** ВМІННЯ ***/
+    .skills {
+        padding: 5vh 0;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 100%;
+        background-color: rgb(21,21,21);
+    }
+    .skills-block {
+        width: 90%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .skills header {
+        width: 100%;
+    }
+    .skills~header h1 {
+        width: 100%;
+    }
+    .skill-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+    }
+    .skill-block h2 {
+        font-size: 1.4em;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+    .progress-bar {
+        width: 100%;
+        height: 3em;
+        font-size: 1.4em;
+        line-height: 2.4;
+        border: 2px solid rgb(135,176,74);
+    }
+    .level-html {
+        width: 0;
+        height: 85%;
+        margin: 0.2em;
+        text-align: center;
+        background-color: rgb(135,176,74);
+        -webkit-animation-name: level-html-animate;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite; 
+        -webkit-animation-timing-function: linear;
+        animation-name: level-html-animate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite; 
+        animation-timing-function: linear;
+    }
+    .level-css {
+        width: 0;
+        height: 85%;
+        margin: 0.2em;
+        text-align: center;
+        background-color: rgb(135,176,74);
+        -webkit-animation-name: level-css-animate;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite; 
+        -webkit-animation-timing-function: linear;
+        animation-name: level-css-animate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite; 
+        animation-timing-function: linear;
+    }
+    .level-js {
+        width: 0;
+        height: 85%;
+        margin: 0.2em;
+        text-align: center;
+        background-color: rgb(135,176,74);
+        -webkit-animation-name: level-js-animate;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite; 
+        -webkit-animation-timing-function: linear;
+        animation-name: level-js-animate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite; 
+        animation-timing-function: linear;
+    }
+    /*** /ВМІННЯ ***/
+    
+    .my-jobs {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+    .project-block {
+        width: 22%;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid transparent;
+    }
+    .project-block:hover {
+        border: 2px solid rgb(135,176,74);
+    }
+    .project-block h2 {
+        font-size: 1.6em;
+        font-weight: 400;
+    }
+    .project-block a {
+        width: 60%;
+        display: block;
+    }
+    .project-block a.text-link {
+        width: 90%;
+        padding: 0.1em;
+        padding-left: 0.9vw;
+        margin: 0.5em;     
+        font-size: 1.2em;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1em;
+        color: rgba(245,245,245,.3);
+        border-left: 2px solid rgb(135,176,74);
+        border-right: 2px solid rgb(135,176,74);
+    }
+    .project-block a:hover {
+        color: rgb(135,176,74);
+        border-left: 2px solid rgba(245,245,245,.3);
+        border-right: 2px solid rgba(245,245,245,.3);
+    }
+    .writeToMe-block {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: rgb(21,21,21);
+        padding-top: 5vh;
+    }
+    .send-form {
+        width: 80%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+    label {
+        align-self: flex-start;
+        margin-top: 1rem;
+        font-size: 1.2em;
+    }
+    input,
+    textarea {
+        width: 100%;
+        margin-top: 0.5rem;
+        outline: none;
+        resize: none;
+        overflow: auto;
+        border-radius: 0;
+        background-color: rgba(245,245,245,1);
+        border: 2px solid transparent;
+    }
+    input:focus,
+    textarea:focus {
+        outline: none;
+        border-radius: 0;
+        border: 2px solid rgb(135,176,74);
+        box-shadow: 0 2px 5px rgba(0,0,0,1);
+    }
+
+    button {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 1rem;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        color: rgba(245,245,245,.3);
+        background-color: transparent;
+        color: rgba(245,245,245,.3);
+        border-color: transparent;
+        border-left: 2px solid rgb(135,176,74);
+        border-right: 2px solid rgb(135,176,74);
+    }
+    button:hover {
+        color: rgba(245,245,245,1);
+        background-color: rgb(135,176,74);
+    }
+    button[type="reset"] {
+        border-left: 2px solid rgb(170,75,75);
+        border-right: 2px solid rgb(170,75,75);
+    }
+    button[type="reset"]:hover {
+        background-color: rgb(170,75,75);
+    }
+    
+    .contacts-block {
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+    .contacts-list {
+        width: 90%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .contacts-list img {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+    }
+    footer {
+        width: 100%;
+        background-color: rgb(21,21,21);
+        margin-top: 4.9vh;
+        padding: 2rem;
+    }
+    footer h6 {
+        font-size: 0.9em;
+    }
+    footer h6 b {
+        font-size: 1em;
+        color: rgb(135,176,74);
+    }
+}
 
 @keyframes level-html-animate {
     from {
